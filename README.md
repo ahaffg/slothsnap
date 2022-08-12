@@ -1,108 +1,129 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Sloth Snap!
+![Responsive screenshot](/assets/images/readme-images/responsive-screen.jpg)
+# Project Aim
+Sloth Snap is a memory game designed to challenge the player to reach a perfect game of 6 pairs. The user interface is bright and friendly and directly engaes my son's spesial interest- Sloths!. The game
+The game has three screens: Start, Game, End.
+Target audience: My son (6 years) initially, dow the line potentially other younger children or neurodivergent people who would like a way to exersize their short term memry muscles.
+This project is the second of four projects that needs to be completed in order to receive a diploma in Software Development from The Code Institute.
+Required technologies are HTML5, CSS3 and JavaScript.
+A live version of the project can be found here - ???
+# Table of Content
++ [UX](#ux "UX")
+  + [User Demographic](#user-demographic "User Demographic")
+  + [User Stories](#user-stories "User Stories")
+    + [New Players](#new-players "New Players")
+    + [Returning Players](#returning-players "Returning Players")
+  + [Player Goals](#player-goals "Player")
+  + [Project Requirements](#project-requirements "Project Requirements")
+  + [Design](#design "Design")
+    + [Design Discovery Phase](#design-discovery-phase "Design Discovery Phase")
+    + [Colours](#colours "Colours")
+    + [Typography](#typography "Typography")
+    + [Images](#images "Images")
++ [Features](#features "Features")
+  + [Existing Features](#existing-features "Existing Features")
+    + [Start Screen](#start-screen "Start Screen")
+    + [Game Screen](#game-screen "Game Screen")
+    + [End Screen](#end-screen "End Screen")
+  + [Features Left to Implement](#features-left-to-implement "Features Left to Implement")
++ [Technologies used](#technologies-used "Technologies used")
++ [Testing](#testing "Testing")
+  + [Validator Testing](#validator-testing "Validator Testing")
+  + [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
++ [Development and Deployment](#development-and-deployment "Development and Deployment")
++ [Content](#content "Content")
++ [Media](#media "Media")
++ [Credits](#credits "Credits")
+## UX
+### User Demographic
 
-Welcome ahaffg,
+### User Stories
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+#### New players
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+#### Returning players
 
-## Gitpod Reminders
+### Player goals
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Project Requirements
+ - To build an interactive front-end site that responds to user actions. The user should engage actively by altering data and how the site displays. The development process needs to be well documented through a version controls system such as GitHub and contain HTML5, CSS3 and JavaScript.
+### Design
+
+#### Design Discovery Phase
+ - wireframes -
+ -start/game/end -
+#### Colours
+The colour palette was created using coolers.
+#### Typography
+The primary font used for titles is: [Mochiy Pop One](https://fonts.google.com/specimen/Mochiy+Pop+One?query=Mochi)
+![Title Font](/assets/images/readMeImages/readmeMochiyPopOne.png) I feel this is an easy to read but fun font, and wil hopefully attract the players attention. The body font will then be [Short Stack](https://fonts.google.com/specimen/Short+Stack?query=short+stack) which is very clear and easy to read (espectally for instructions etc) and works well with the Mochiy Pop One tile font.
+![Body Font](/assets/images/readMeImages/readmeShortStackFont.png)
+#### Images
+
+## Features 
+Sloth Snap consists of three game screens:
+ - Start Screen
+ - Game Screen
+ - End Screen
+Sloth Snap is a linear game and when the player presses start the game board is created and shuffled. The player ends up at the end screen at either a ”Win” or a ”Loss”.
+### Existing Features
+#### Start Screen
+The Start Screen consists of a header and a paragraph that contains the games main title and the rules. Other elements are:
+ - Text that tells player to enter name, this is optional
+ - Input field for player name (optional)
+ - Start button that takes the player to the main board and shuffles the deck.
+![Start Screen](/assets/images/readme-images/start-screen.png)
+#### Game Screen
+The game screen 
+ - At start 12 cards with symbols are shuffled and distributed across the board. The game starts the moment the game screen is visible to the player.
+![Game Screen](/assets/images/readme-images/game-screen.png)
+#### End Screen
+Sloth Snap is a linear game and all players end up at the end screen win. Messages differ depending on win or loss. If a player does not enter a player name the standard player name of the game appears. The end screen displays:
+ - Header that tells the player if they won or lost.
+ - Paragraph telling the player how many pairs they were able to match.
+ - Paragraph telling the player how many tries it took to find the pairs.
+ - Paragraph with two different messages depending on win/lose.
+ - Play again button that generates a new game board and shuffles the cards.
+ - Quit button that takes the player to the start screen
+![About us Section part 1](/assets/images/readme-images/end-screen.png)
+### Features Left to Implement
+- Future version of this game will contain database with high scores.
+- Two more game modes, one harder and one easier.
+[Back to top](#quickmem)
+## Technologies used
+- [HTML](https://en.wikipedia.org/wiki/HTML)
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/javascript)
+## Testing 
+
+### Validator Testing 
+
+### Unfixed Bugs
+
+## Development and Deployment
+The development environment used for this project was GitPod. To track the development stage and handle version control regular commits and pushes to GitHub has been conducted. The GitPod environment was created using a template provided by Code Institute.
+The live version of the project is deployed at GitHub pages.
+The procedure for deployment followed the "Creating your site" steps provided in [GitHub Docs.](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+1. Log into GitHub.
+2. Locate the GitHub Repository that shall be deployed live.
+3. At the top of the repository, select Settings from the menu items.
+4. Scroll down the Settings page to the ”GitHub Pages" section and click on the ”Check it out here!”
+5. At the ”Source” section choose ”main” as Branch and root as folder and click ”Save”
+6. The website will deploy and the pages refreshes to provide the live link to the project.
+The live link can be found here - https://pelikantapeten.github.io/p2-quickmem/
+## Content 
+- All text content in this game has been produced by the author.
+- Icons [Font Awesome](https://fontawesome.com/)
+## Media
+Google Fonts
+## Credits 
+### For code inspiration, design inputs, help and advice.
+I have consulted numerous websites, individuals and slack channels to get support for the code. No code block is directly copied but some generates from information I gathered from other developers and sites:
+ - [Mdn web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) for information about Arrays and also identifying bugs.
+ - [DevelopedByEd](https://developedbyed.com/) that taught me in his vides on how to generate a board of cards and display it as a CSS grid.
+ - [W3 Schools](https://www.w3schools.com/jsref/met_element_addeventlistener.asp) for understanding Event Listeners. 
+  - [Patternio](https://patternico.com/#t4jZ7NG8wcwht3SL) for providing an easy way for me to create a unique and dynamic background using my own images.
+### Acknowledgment
+
 
 `python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
