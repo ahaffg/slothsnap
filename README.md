@@ -1,5 +1,5 @@
 # Sloth Snap!
-![Responsive screenshot](/assets/images/readme-images/responsive-screen.jpg)
+![Sloths](/assets/images/readMeImages/readMeSlothCards.jpg)
 # Project Aim
 Sloth Snap is a memory game designed to challenge the player to reach a perfect game of 6 pairs. The user interface is bright and friendly and directly engaes my son's spesial interest- Sloths!. The game
 The game has three screens: Start, Game, End.
