@@ -8,11 +8,13 @@
     border: none;
 }
 
-background {
-   background-image: url('/assets/images/leafBkg.png') repeat center center;
-   
+body {
+   background-image: url('/assets/images/leafBkg.png');
+   background-color: #BFD200;
 }
 
 h1 {
     font-family: 'Mochiy Pop One', sans-serif;
+    color: #264653;
+    border-top: 100px;
 }
