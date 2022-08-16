@@ -11,7 +11,33 @@
     <title>Sloth Snap!</title>
 </head>
 <body>
-<h1><center>Sloth Snap!</center></h1>
-    
+    <!--Game name header-->
+    <h1><center>Sloth Snap!</center></h1>
+    <!-- Start screen, game instructions and name entry-->
+    <div id="start-wrapper" class="game-wrapper">
+        <div id="start-screen" class="gscreen">
+            <p><center>How to play!</center></p>
+            <br>
+            <p><center>Click on the tiles to try and match pairs of pictures.</center></p>
+            <br>
+            <p><center>Type your name into the box and click the button to begin.</center></p>
+            <br>
+            <p><center>Good luck!</center></p>
+            <p id="ent-name-text"><center>Please type your name here:</center></p>
+            <input id="name-box" type="text" aria-label="Input your name here" placeholder="Your name!">
+            <br>
+            <button data-type="submit" id="start-button" class="game-button">Lets go!</button>
+        </div>
+<!-- Game code-->
+        <div id="main-wrapper" class="game-wrapper">
+            <div id="countdown-background">
+                <div id="countdown-bar">0</div>
+            </div>
+            <div id="main-screen" class="gscreen">
+                <!-- The game board is generated here from JavaScript stored in assets/js/script.js -->
+            </div>
+
+ <!-- Game script -->
+ <script src="assets/js/script.js"></script>
 </body>
 </html>
