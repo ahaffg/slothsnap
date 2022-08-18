@@ -56,6 +56,16 @@ The game has three sections: "Welcome!", "Play!" and "Hooray!".
 #### Design Discovery Phase
 ![Start Game Wireframe](/assets/images/readMeImages/slothSnapWireFrameStartGame.jpg)
 Above is my wireframe for the layout of the "Play!" screen. I want there to be as few functions as possible so that the game play is intuitive and that the player can focus on the game.
+
+In order for the game to work I will need to write functions that:
+•	Have a template literal that uses the inputted username to personalise the game for the player.
+•	Event listens for clicks.
+•	Checks the values of the selected cards to test if they are a matching pair.
+•	Keep the correctly selected pairs ‘facing upwards’
+•	Or return incorrect selections to a ‘downward’ position.
+•	An event listener that will trigger a congratulatory message (template literal) when the game has been successfully completed.
+•	A function that will “shuffle” the cards each time a new game is started.
+
 #### Colors
 ![Palette](/assets/images/readMeImages/readMepalette.jpg)
 
