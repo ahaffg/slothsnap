@@ -1,3 +1,27 @@
+/**
+ * Finish loading the DOM before game can start adopted from "Love Maths" 
+ * https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode
+ */
+ document.addEventListener("DOMContentLoaded", () => {
+  
+    //Start button on start screen
+    var startButton = document.getElementById("start-button");
+    startButton.addEventListener("click", collectPlayerName);
+    startButton.addEventListener("click", hideStartScreen);
+    startButton.addEventListener("click", showGameScreen);
+    startButton.addEventListener("click", mainGame);
+
+    function collectPlayerName() {
+        let playerName = document.getElementById("name-box").value;
+    
+          if (playerName === ("")) {
+            document.getElementById("player-name").innerHTML = "Speedy Sloth!";
+          } else {
+            document.getElementById("player-name").innerHTML = (playerName);
+          }
+      }
+    });
+
 const cards = document.querySelectorAll(".card");
 let matched = 0;
 let cardOne, cardTwo;
@@ -57,3 +81,85 @@ shuffleCard();
 cards.forEach(card => {
     card.addEventListener("click", flipCard);
 });
+
+/**
+* Function that hides the start screen
+*/
+function hideStartScreen() {
+    let toggleStartScreen = document.getElementById("start-wrapper");
+    if (toggleStartScreen.style.display === "none") {
+      toggleStartScreen.style.display = "block";
+    } else {
+        toggleStartScreen.style.display = "none";
+      }
+  }
+  
+  /**
+  * Function that shows the start screen
+  */
+  function showStartScreen() {
+    let toggleStartScreen = document.getElementById("start-wrapper");
+    if (toggleStartScreen.style.display === "block") {
+      toggleStartScreen.style.display = "none";
+    } else {
+        toggleStartScreen.style.display = "block";
+    }
+  }
+  
+  /**
+  * Function that shows the main game screen
+  */
+  function showGameScreen() {
+    let toggleGameScreen = document.getElementById("main-wrapper");
+    if (toggleGameScreen.style.display === "block") {
+      toggleGameScreen.style.display = "none";
+    } else {
+        toggleGameScreen.style.display = "block";
+      }
+  }
+  
+  /**
+  * Function that hides the main game screen
+  */
+  function hideGameScreen() {
+    let toggleGameScreen = document.getElementById("main-wrapper");
+    if (toggleGameScreen.style.display === "none") {
+      toggleGameScreen.style.display = "block";
+    } else {
+      toggleGameScreen.style.display = "none";
+    }
+  }
+  
+  /**
+  * Function that shows the end screen
+  */
+  function showEndScreen() {
+    let toggleEndScreen = document.getElementById("end-wrapper");
+    if (toggleEndScreen.style.display === "block") {
+      toggleEndScreen.style.display = "none";
+    } else {
+        toggleEndScreen.style.display = "block";
+      }
+  }
+  
+  /**
+  * Function that hides the end screen
+  */
+  function hideEndScreen() {
+    let toggleEndScreen = document.getElementById("end-wrapper");
+    if (toggleEndScreen.style.display === "none") {
+      toggleEndScreen.style.display = "block";
+    } else {
+      toggleEndScreen.style.display = "none";
+      }
+  }
+  
+  /**
+  * Clears the game board of cards upon restart (Play again)
+  */
+  function clearGameCards () {
+    let oldGameBoard = document.getElementById("main-screen");
+    oldGameBoard.innerHTML = "";
+  }
+  
+  
