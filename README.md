@@ -5,7 +5,7 @@ I want to create a simple memory game to aid my son's short term memory ability.
  
 This project is the second of four projects that needs to be completed in order to receive a diploma in Software Development from The Code Institute.
 Required technologies are HTML5, CSS3 and JavaScript.
-A live version of the project can be found here - ???
+A live version of the project can be found here - https://ahaffg.github.io/slothsnap/
 # Table of Content
 + [UX](#ux "UX")
   + [User Demographic](#user-demographic "User Demographic")
