@@ -1,160 +1,363 @@
-/* Google font import */
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Short+Stack&display=swap');
 
-/* Remove browser default settings */
 * {
     margin: 0;
     padding: 0;
-    border: none;
+    box-sizing: border-box;
+    font-family: 'Short Stack', cursive;
+    color: #2F4858;
 }
 
 body {
-   background-image: url('/assets/images/leafBkg.png');
-   background-color: #BFD200;
-   display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    background-color: #BFD200;
+    background-image: url('../images/leafBkg.png');
+
 }
 
 h1 {
     font-family: 'Mochiy Pop One', sans-serif;
-    color: #264653;
-    font-size: 10vh;
-    padding: 3rem;
+    color: #2F4858;
+    font-size: 4em;
+    text-shadow: #F3722C 0.5em;
 }
 
-body {
-    font-family: 'Short Stack', cursive;
-    color: #264653;
-    font-size: 3vh;
+button {
+    display: inline-block;
+    padding: 0.375em 1.25em;
+    margin: 0 0.125em 0.125em 0;
+    border: 0.1875em solid #2F4858;
+    border-radius: 1.25em;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    background-color: #2F4858;
+    text-shadow: #BFD200;
+    text-align: center;
+    transition: all 0.2s;
 }
 
-p{
-    padding: 1vh;
+button:hover {
+    border-color: rgba(255, 255, 255, 1);
 }
 
-/* adapted from: https://www.codingnepalweb.com/build-memory-card-game-html-javascript/ */
-
-.wrapper {
-    padding: 25px;
-    border-radius: 10px;
-    background: #F8F8F8;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.cards,
-.card,
-.view {
-    display: flex;
-    align-items: center;
+.easy-game {
+    margin: 1.25em auto;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 0.625em;
     justify-content: center;
-}
-
-.cards {
-    height: 400px;
-    width: 400px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.cards .card {
-    cursor: pointer;
-    list-style: none;
-    user-select: none;
-    position: relative;
     perspective: 1000px;
+}
+
+.medium-game {
+    margin: 1.875em auto;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 0px;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.hard-game {
+    margin: 1.875em auto;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 0px;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.card {
+    margin: 0.3125em;
+    height: 9.375em;
+    width: 9.375em;
+    background: url(../images/back.png);
+    background-size: contain;
+    position: relative;
     transform-style: preserve-3d;
-    height: calc(100% / 4 - 10px);
-    width: calc(100% / 4 - 10px);
+    transition: 0.5s ease-in-out;
+    border-radius: 25px;
+
 }
 
-.card.shake {
-    animation: shake 0.35s ease-in-out;
+.card:hover {
+    border-color: rgba(255, 255, 255, 1);
 }
 
-@keyframes shake {
-
-    0%,
-    100% {
-        transform: translateX(0);
-    }
-
-    20% {
-        transform: translateX(-13px);
-    }
-
-    40% {
-        transform: translateX(13px);
-    }
-
-    60% {
-        transform: translateX(-8px);
-    }
-
-    80% {
-        transform: translateX(8px);
-    }
+.easy-game>.card {
+    height: 9.375em;
+    width: 9.375em;
 }
 
-.card .view {
-    width: 100%;
+.medium-game>.card {
+    height: 6.25em;
+    width: 6.25em;
+}
+
+.hard-game>.card {
+    height: 6.25em;
+    width: 6.25em;
+}
+
+
+.picture,
+.back {
     height: 100%;
-    position: absolute;
-    border-radius: 7px;
-    background: #fff;
-    pointer-events: none;
-    backface-visibility: hidden;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.25s linear;
-}
-
-.card .front-view img {
     width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    pointer-events: none;
+    border-radius: 25px;
 }
 
-.card .back-view img {
-    max-width: 100%;
-}
-
-.card .back-view {
+.picture {
     transform: rotateY(-180deg);
 }
 
-.card.flip .back-view {
+.back {
     transform: rotateY(0);
 }
 
-.card.flip .front-view {
+.flipCard,
+.correct {
     transform: rotateY(180deg);
+    pointer-events: none;
 }
 
-@media screen and (max-width: 700px) {
-    .cards {
-        height: 350px;
-        width: 350px;
+.guesses {
+    font-size: 200%;
+    color: #ffffff;
+    text-align: center;
+    background-color: #1e2a40;
+    border-radius: 1.25em;
+    width: 20em;
+    margin: auto;
+}
+
+.win-holder {
+    height: 0px;
+    font-family: 'Mochiy Pop One', sans-serif;
+    color:#F3722C;
+}
+
+.congratulations {
+    width: 30em;
+    padding: 0.625em;
+    margin: auto;
+    background-color: #BFD200;
+    text-align: center;
+    transform: translate(0px, -22.5em);
+    border: 0.3125em #2F4858 solid;
+    background: url(../images/leafBkg.png);
+    background-size: contain;
+    z-index: 100;
+    font-size: 150%;
+}
+
+.congratulationsHidden {
+    opacity: 0.0;
+    pointer-events: none;
+}
+
+.score-wrapper {
+    width: 25em;
+    margin: auto;
+    padding: 0.3125em;
+    border-radius: 1.25em;
+    color: #FFFFFF;
+    background-color: #1e2a40;
+}
+
+#score {
+    color: #BFD200;
+}
+
+/* News Ticker Animation for the "Congratulations!". */
+
+/* (A) FIXED WRAPPER */
+.hwrap {
+    overflow: hidden;
+    /* HIDE SCROLL BAR */
+
+}
+
+/* (B) MOVING TICKER WRAPPER */
+.hmove {
+    display: flex;
+}
+
+/* (C) ITEMS - INTO A LONG HORIZONTAL ROW */
+.hitem {
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.625em;
+    text-align: center;
+    font-size: 200%;
+    color: #F3722C;
+}
+
+.filler {
+    min-height: calc(100vh - 7.5em);
+    align-content: center;
+}
+
+
+/* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
+/* 4 ITEMS -400%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
+@keyframes tickerh {
+    0% {
+        transform: translate3d(100%, 0, 0);
     }
 
-    .card .front-view img {
-        width: 17px;
-    }
-
-    .card .back-view img {
-        max-width: 40px;
+    100% {
+        transform: translate3d(-400%, 0, 0);
     }
 }
 
-@media screen and (max-width: 530px) {
-    .cards {
-        height: 300px;
-        width: 300px;
+.hmove {
+    animation: tickerh linear 15s infinite;
+}
+
+/* Media device size queries */
+
+@media (max-width: 900px),
+(max-height: 925px) {
+
+    .easy-game>.card {
+        height: 6.25em;
+        width: 6.25em;
     }
 
-    .card .front-view img {
-        width: 15px;
+    .medium-game>.card {
+        height: 4.6875em;
+        width: 4.6875em;
     }
 
-    .card .back-view img {
-        max-width: 35px;
+    .hard-game>.card {
+        height: 4.6875em;
+        width: 4.6875em;
     }
+
+    .guesses {
+        font-size: 150%;
+        width: 16em;
+
+    }
+
+    .congratulations {
+        transform: translate(0px, -17.8em);
+        width: 24em;
+    }
+
+    .score-wrapper {
+        width: 20em;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .hard-game>.card {
+        height: 3.125em;
+        width: 3.125em;
+    }
+
+    .footer {
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 650px) {
+
+    h1 {
+        font-size: 250%;
+    }
+
+    .header {
+        margin: 0.3em;
+        float: right;
+    }
+
+    .game {
+        grid-gap: 0.3125em;
+    }
+
+    .card {
+        height: 4.6875em;
+        width: 4.6875em;
+        margin: 0.1875em;
+    }
+
+    .congratulations {
+        font-size: 110%;
+        transform: translate(0px, -22em);
+    }
+}
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 150%;
+    }
+
+    .game {
+        grid-gap: 0em;
+    }
+
+    .easy-game>.card {
+        height: 3.125em;
+        width: 3.125em;
+        margin: 0.125em;
+    }
+
+    .medium-game>.card {
+        height: 3.125em;
+        width: 3.125em;
+        margin: 0.125em;
+    }
+
+    .hard-game>.card {
+        height: 3.125em;
+        width: 3.125em;
+    }
+
+
+
+    .guesses {
+        font-size: 100%;
+        width: 14em;
+
+    }
+
+    .congratulations {
+        transform: translate(0px, -18em);
+        font-size: 80%;
+        width: 21em;
+    }
+
+    .restart {
+        font-size: 80%;
+    }
+
+    .footer {
+        font-size: 70%;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .medium-game>.card {
+        height: 2.5em;
+        width: 2.5em;
+
+    }
+
+    .hard-game>.card {
+        height: 2.5em;
+        width: 2.5em;
+    }
+
 }

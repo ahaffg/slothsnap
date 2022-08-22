@@ -75,10 +75,10 @@ hardButton[0].addEventListener("click", () => {
 */
 
 let getImages = [{
-  imgSrc: "./assets/images/sloth_1.jpg",
+  imgSrc: "./assets/images/sloth_1.png",
   name: "sloth_1"
 }, {
-  imgSrc: "./assets/images/sloth_1.jpg",
+  imgSrc: "./assets/images/sloth_1.png",
   name: "sloth_1"
 }, {
   imgSrc: "./assets/images/sloth_2.png",
