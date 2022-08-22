@@ -1,165 +1,314 @@
 /**
- * Finish loading the DOM before game can start adopted from "Love Maths" 
- * https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode
+ * Event Listeners
  */
- document.addEventListener("DOMContentLoaded", () => {
-  
-    //Start button on start screen
-    var startButton = document.getElementById("start-button");
-    startButton.addEventListener("click", collectPlayerName);
-    startButton.addEventListener("click", hideStartScreen);
-    startButton.addEventListener("click", showGameScreen);
-    startButton.addEventListener("click", mainGame);
 
-    function collectPlayerName() {
-        let playerName = document.getElementById("name-box").value;
-    
-          if (playerName === ("")) {
-            document.getElementById("player-name").innerHTML = "Speedy Sloth!";
-          } else {
-            document.getElementById("player-name").innerHTML = (playerName);
-          }
-      }
-    });
-
-const cards = document.querySelectorAll(".card");
-let matched = 0;
-let cardOne, cardTwo;
-let disableDeck = false;
-function flipCard({ target: clickedCard }) {
-    if (cardOne !== clickedCard && !disableDeck) {
-        clickedCard.classList.add("flip");
-        if (!cardOne) {
-            return cardOne = clickedCard;
-        }
-        cardTwo = clickedCard;
-        disableDeck = true;
-        let cardOneImg = cardOne.querySelector(".back-view img").src,
-            cardTwoImg = cardTwo.querySelector(".back-view img").src;
-        matchCards(cardOneImg, cardTwoImg);
-    }
-}
-function matchCards(img1, img2) {
-    if (img1 === img2) {
-        matched++;
-        if (matched == 6) {
-            setTimeout(() => {
-                return shuffleCard();
-            }, 1000);
-        }
-        cardOne.removeEventListener("click", flipCard);
-        cardTwo.removeEventListener("click", flipCard);
-        cardOne = cardTwo = "";
-        return disableDeck = false;
-    }
-    setTimeout(() => {
-        cardOne.classList.add("shake");
-        cardTwo.classList.add("shake");
-    }, 400);
-    setTimeout(() => {
-        cardOne.classList.remove("shake", "flip");
-        cardTwo.classList.remove("shake", "flip");
-        cardOne = cardTwo = "";
-        disableDeck = false;
-    }, 1200);
-}
-function shuffleCard() {
-    matched = 0;
-    disableDeck = false;
-    cardOne = cardTwo = "";
-    let arr = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6];
-    arr.sort(() => Math.random() > 0.5 ? 1 : -1);
-    cards.forEach((card, i) => {
-        card.classList.remove("flip");
-        let imgTag = card.querySelector(".back-view img");
-        imgTag.src = `images/img-${arr[i]}.png`;
-        card.addEventListener("click", flipCard);
-    });
-}
-shuffleCard();
-
-cards.forEach(card => {
-    card.addEventListener("click", flipCard);
+ document.addEventListener("DOMContentLoaded", function () {
+  shuffledCards();
+  imageGenerator();
 });
 
 /**
-* Function that hides the start screen
+* Audio
 */
-function hideStartScreen() {
-    let toggleStartScreen = document.getElementById("start-wrapper");
-    if (toggleStartScreen.style.display === "none") {
-      toggleStartScreen.style.display = "block";
-    } else {
-        toggleStartScreen.style.display = "none";
+
+let cardSound = new Audio('./assets/sounds/card-flip.wav');
+let matchSound = new Audio('./assets/sounds/match.mp3');
+let winSound = new Audio('./assets/sounds/game-win.wav');
+
+/**
+* Select Game Type - Used by the Card Grid Generator to determine the cards used
+* and by the CSS to change the layout of the grid.
+*/
+
+var easy = true;
+var medium = false;
+var hard = false;
+var easyScore = 100;
+var mediumScore = 100;
+var hardScore = 100;
+
+let hiddenScore = 0;
+
+/* What happens when the Easy, Medium or Hard buttons are clicked */
+let easyButton = document.getElementsByClassName("easy");
+easyButton[0].addEventListener("click", () => {
+  easy = true;
+  medium = false;
+  hard = false;
+  gameType = document.getElementsByClassName("game");
+  gameType[0].classList.add("easy-game");
+  gameType[0].classList.remove("medium-game");
+  gameType[0].classList.remove("hard-game");
+  levelSelect();
+  hiddenScore = 0;
+  document.getElementById("difficulty-text").innerText = "Easy";
+});
+let mediumButton = document.getElementsByClassName("medium");
+mediumButton[0].addEventListener("click", () => {
+  medium = true;
+  easy = false;
+  hard = false;
+  gameType = document.getElementsByClassName("game");
+  gameType[0].classList.remove("easy-game");
+  gameType[0].classList.add("medium-game");
+  gameType[0].classList.remove("hard-game");
+  levelSelect();
+  hiddenScore = 0;
+  document.getElementById("difficulty-text").innerText = "Medium";
+});
+let hardButton = document.getElementsByClassName("hard");
+hardButton[0].addEventListener("click", () => {
+  hard = true;
+  easy = false;
+  medium = false;
+  gameType = document.getElementsByClassName("game");
+  gameType[0].classList.remove("easy-game");
+  gameType[0].classList.remove("medium-game");
+  gameType[0].classList.add("hard-game");
+  levelSelect();
+  hiddenScore = 0;
+  document.getElementById("difficulty-text").innerText = "Hard";
+});
+
+/**
+* Image List - An array of all the images, taken by the Shuffle Cards section before going into the game.
+*/
+
+let getImages = [{
+  imgSrc: "./assets/images/sloth_1.jpg",
+  name: "sloth_1"
+}, {
+  imgSrc: "./assets/images/sloth_1.jpg",
+  name: "sloth_1"
+}, {
+  imgSrc: "./assets/images/sloth_2.png",
+  name: "sloth_2"
+}, {
+  imgSrc: "./assets/images/sloth_2.png",
+  name: "sloth_2"
+}, {
+  imgSrc: "./assets/images/sloth_3.png",
+  name: "sloth_3"
+}, {
+  imgSrc: "./assets/images/sloth_3.png",
+  name: "sloth_3"
+}, {
+  imgSrc: "./assets/images/sloth_4.png",
+  name: "sloth_4"
+}, {
+  imgSrc: "./assets/images/sloth_4.png",
+  name: "sloth_4"
+}, {
+  imgSrc: "./assets/images/sloth_5.png",
+  name: "sloth_5"
+}, {
+  imgSrc: "./assets/images/sloth_5.png",
+  name: "sloth_5"
+}, {
+  imgSrc: "./assets/images/sloth_6.png",
+  name: "sloth_6"
+}, {
+  imgSrc: "./assets/images/sloth_6.png",
+  name: "sloth_6"
+},
+]
+
+/**
+* Shuffle Cards - Takes the getImages array, slices it down to size depending on the difficulty and shuffles
+* those cards into the new arrayOrder which is sent to the card grid generator.
+*/
+
+let shuffledCards = () => {
+  if (easy === true) {
+      let arrayOrder = getImages.slice(0, 12);
+      arrayOrder.sort(() => Math.random() - 0.5);
+      return arrayOrder;
+  } else if (medium === true) {
+      let arrayOrder = getImages.slice(0, 24);
+      arrayOrder.sort(() => Math.random() - 0.5);
+      return arrayOrder;
+  } else if (hard === true) {
+      let arrayOrder = getImages.slice(0, 36);
+      arrayOrder.sort(() => Math.random() - 0.5);
+      return arrayOrder;
+  }
+};
+
+/**
+* Generate Card Grid - Creates the cards by placing div elements into a grid, then placing
+* the front of the card as an image using the shuffled array and creates the back of the card using
+* a single image in the CSS.
+* Each card has the name of the image attached to it for checking. 
+* The card divs can be clicked on which pushes the clicked card into the numberOfCards array for checking
+* and triggers the checkForMatch function.
+* The front and the back of the cards rotate 180degrees when the card is clicked on.
+*/
+
+let imageGenerator = () => {
+  let arrayOrder = shuffledCards();
+
+  arrayOrder.forEach((element) => {
+      let card = document.createElement("div");
+      let picture = document.createElement("img");
+      let back = document.createElement("div");
+
+      card.classList.add("card");
+      card.id = "card";
+      picture.classList.add("picture");
+      back.classList.add("back");
+
+      picture.src = element.imgSrc;
+      card.setAttribute("name", element.name);
+
+      game = document.getElementsByClassName("game");
+      game[0].appendChild(card);
+      card.appendChild(picture);
+      card.appendChild(back);
+
+      picture.src = element.imgSrc;
+
+      card.addEventListener("click", (names) => {
+          cardSound.play();
+          numberOfCards.push(element);
+          console.log(numberOfCards[0]);
+          console.log(numberOfCards[1]);
+          card.classList.add("correct");
+          card.classList.toggle("flipCard");
+          checkForMatch(names);
+
+      });
+  });
+};
+
+/**
+* Compare Cards - After a card is clicked on the checkForMatch function checks if there are 2
+* cards in the numberOfCards array. 
+* If so, it then compares the names of the cards. 
+* If correct,
+* the turn counter is increased, audio signals a match to the player, a 'counter' is added to
+* an array that checks for the end of the game, the array that compares the cards is cleared and
+* two classes are changed so that the cards stay flipped over and becomes unclickable.
+* If incorrect,
+* the turn counter is increased and the cards flip back over after a short delay.
+*/
+
+let numberOfCards = [];
+let flipCounter = [];
+const checkForMatch = (names) => {
+
+  let targetCard = names.target;
+  let flipCard = document.querySelectorAll(".flipCard");
+
+  if (numberOfCards.length === 2) {
+
+      if (numberOfCards[0].name === numberOfCards[1].name) {
+          console.log("match");
+          incrementScore();
+          setTimeout(() => matchSound.play(), 350);
+          flipCounter.push(1);
+          flipCard.forEach((card) => {
+              numberOfCards = [];
+              targetCard.classList.add("counter");
+              card.classList.remove("flipCard");
+          });
+          console.log(flipCounter)
+      } else {
+          console.log("wrong");
+          incrementScore();
+          flipCard.forEach((card) => {
+              setTimeout(() => card.classList.remove("flipCard"), 1000);
+              setTimeout(() => card.classList.remove("correct"), 1000);
+              numberOfCards = [];
+
+
+          });
       }
   }
-  
-  /**
-  * Function that shows the start screen
-  */
-  function showStartScreen() {
-    let toggleStartScreen = document.getElementById("start-wrapper");
-    if (toggleStartScreen.style.display === "block") {
-      toggleStartScreen.style.display = "none";
-    } else {
-        toggleStartScreen.style.display = "block";
-    }
+  /* Checks for if the player has won. */
+  if (easy === true && flipCounter.length === 6) {
+      gameWin();
   }
-  
-  /**
-  * Function that shows the main game screen
-  */
-  function showGameScreen() {
-    let toggleGameScreen = document.getElementById("main-wrapper");
-    if (toggleGameScreen.style.display === "block") {
-      toggleGameScreen.style.display = "none";
-    } else {
-        toggleGameScreen.style.display = "block";
-      }
+  if (medium === true && flipCounter.length === 12) {
+      gameWin();
   }
-  
-  /**
-  * Function that hides the main game screen
-  */
-  function hideGameScreen() {
-    let toggleGameScreen = document.getElementById("main-wrapper");
-    if (toggleGameScreen.style.display === "none") {
-      toggleGameScreen.style.display = "block";
-    } else {
-      toggleGameScreen.style.display = "none";
-    }
+  if (hard === true && flipCounter.length === 18) {
+      gameWin();
   }
-  
-  /**
-  * Function that shows the end screen
-  */
-  function showEndScreen() {
-    let toggleEndScreen = document.getElementById("end-wrapper");
-    if (toggleEndScreen.style.display === "block") {
-      toggleEndScreen.style.display = "none";
-    } else {
-        toggleEndScreen.style.display = "block";
-      }
+};
+/**
+* Moves Counter - Increases the number of moves and inserts the number into two places on the page 
+* where it is visible to the player.
+*/
+
+function incrementScore() {
+  let totalScore = parseInt(document.getElementById("score").innerText);
+  document.getElementById("score").innerText = ++totalScore;
+  let incrementScore = parseInt(document.getElementById("total-score").innerText);
+  document.getElementById("total-score").innerText = ++incrementScore;
+  ++hiddenScore;
+}
+/**
+* Game Win - When the if statements in the card checker trigger the gameWin, the div containing 
+* the congratulations message becomes visable and interactable.
+*/
+
+let gameWin = () => {
+  winSound.play(), 1000;
+  win = document.getElementsByClassName("congratulations");
+  win[0].classList.toggle("congratulationsHidden");
+
+  /* If statements update the users best score depending on the difficulty */
+
+  if (easy === true && hiddenScore < easyScore) {
+      document.getElementById("previous-score").innerText = hiddenScore;
+      easyScore = hiddenScore;
   }
-  
-  /**
-  * Function that hides the end screen
-  */
-  function hideEndScreen() {
-    let toggleEndScreen = document.getElementById("end-wrapper");
-    if (toggleEndScreen.style.display === "none") {
-      toggleEndScreen.style.display = "block";
-    } else {
-      toggleEndScreen.style.display = "none";
-      }
+
+  if (medium === true && hiddenScore < mediumScore) {
+      document.getElementById("previous-score").innerText = hiddenScore;
+      mediumScore = hiddenScore;
   }
-  
-  /**
-  * Clears the game board of cards upon restart (Play again)
-  */
-  function clearGameCards () {
-    let oldGameBoard = document.getElementById("main-screen");
-    oldGameBoard.innerHTML = "";
+
+  if (hard === true && hiddenScore < hardScore) {
+      document.getElementById("previous-score").innerText = hiddenScore;
+      hardScore = hiddenScore;
   }
-  
-  
+  console.log("Win!");
+};
+
+/**
+* Restart Buttons - The "Play Again?" button and difficulty buttons are both used to start the game over.
+* The difficulty buttons are kept seperate so as not to trigger the classlist.toggle which would
+* otherwise make the Congratulations message appear on the screen.
+*/
+
+let button = document.getElementsByClassName("restart");
+button[0].addEventListener("click", function () {
+  restart();
+});
+
+let restart = () => {
+  win[0].classList.toggle("congratulationsHidden");
+  const elements = document.getElementsByClassName("card");
+  while (elements.length > 0) {
+      elements[0].parentNode.removeChild(elements[0]);
+  }
+  shuffledCards();
+  imageGenerator();
+  flipCounter = [];
+  hiddenScore = 0;
+  document.getElementById("total-score").innerText = 0;
+  document.getElementById("score").innerText = 0;
+};
+
+let levelSelect = () => {
+  const elements = document.getElementsByClassName("card");
+  while (elements.length > 0) {
+      elements[0].parentNode.removeChild(elements[0]);
+  }
+  shuffledCards();
+  imageGenerator();
+  flipCounter = [];
+  document.getElementById("total-score").innerText = 0;
+  document.getElementById("score").innerText = 0;
+};
