@@ -22,7 +22,7 @@ h1 {
     font-family: 'Mochiy Pop One', sans-serif;
     color: #2F4858;
     font-size: 4em;
-    text-shadow: #F3722C 0.5em;
+    text-shadow: #F3722C 2px;
 }
 
 button {
@@ -40,7 +40,7 @@ button {
 }
 
 button:hover {
-    border-color: rgba(255, 255, 255, 1);
+    border-color: #F3722C;
 }
 
 .easy-game {
@@ -84,7 +84,7 @@ button:hover {
 }
 
 .card:hover {
-    border-color: rgba(255, 255, 255, 1);
+    border-color: #F3722C;
 }
 
 .easy-game>.card {
@@ -129,7 +129,7 @@ button:hover {
 
 .guesses {
     font-size: 200%;
-    color: #ffffff;
+    color: #F3722C;
     text-align: center;
     background-color: #1e2a40;
     border-radius: 1.25em;

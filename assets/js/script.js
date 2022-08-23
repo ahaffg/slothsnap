@@ -110,6 +110,18 @@ let getImages = [{
 }, {
   imgSrc: "./assets/images/sloth_6.png",
   name: "sloth_6"
+}, {
+  imgSrc: "./assets/images/sloth_7.png",
+  name: "sloth_7"
+}, {
+  imgSrc: "./assets/images/sloth_7.png",
+  name: "sloth_7"
+}, {
+  imgSrc: "./assets/images/sloth_8.png",
+  name: "sloth_8"
+}, {
+  imgSrc: "./assets/images/sloth_8.png",
+  name: "sloth_8"
 },
 ]
 
@@ -124,7 +136,7 @@ let shuffledCards = () => {
       arrayOrder.sort(() => Math.random() - 0.5);
       return arrayOrder;
   } else if (medium === true) {
-      let arrayOrder = getImages.slice(0, 24);
+      let arrayOrder = getImages.slice(0, 16);
       arrayOrder.sort(() => Math.random() - 0.5);
       return arrayOrder;
   } else if (hard === true) {
@@ -228,7 +240,7 @@ const checkForMatch = (names) => {
   if (easy === true && flipCounter.length === 6) {
       gameWin();
   }
-  if (medium === true && flipCounter.length === 12) {
+  if (medium === true && flipCounter.length === 8) {
       gameWin();
   }
   if (hard === true && flipCounter.length === 18) {
