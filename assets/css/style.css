@@ -25,6 +25,30 @@ h1 {
     text-shadow: #F3722C 2px;
 }
 
+.start-wrapper .game-wrapper {
+    width: 30em;
+    padding: 0.625em;
+    margin: auto;
+    background-color: #BFD200;
+    text-align: center;
+    transform: translate(0px, -22.5em);
+    border: 0.3125em #2F4858 solid;
+    background: url(../images/leafBkg.png);
+    background-size: contain;
+    z-index: 100;
+    font-size: 150%;
+}
+
+.start-wrapper .game-wrapper {
+    width: 25em;
+    margin: auto;
+    padding: 0.3125em;
+    border-radius: 1.25em;
+    border:#1e2a40 4px solid;
+    color: #FFFFFF;
+    background-color: #1e2a40;
+}
+
 button {
     display: inline-block;
     padding: 0.375em 1.25em;
@@ -41,6 +65,36 @@ button {
 
 button:hover {
     border-color: #F3722C;
+}
+
+#easy {
+    color:#BFD200;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+#easy:hover {
+    border-color: #BFD200;
+    border-width: 4px;
+}
+
+#medium {
+    color: #F3722C;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+#medium:hover {
+    border-color: #F3722C;
+    border-width: 4px;
+}
+
+#hard {
+    color: #F94144;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+#hard:hover {
+    border-color: #F94144;
+    border-width: 4px;
 }
 
 .easy-game {
