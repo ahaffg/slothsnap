@@ -67,32 +67,32 @@ button:hover {
     border-color: #F3722C;
 }
 
-#easy {
+#easyButton {
     color:#BFD200;
     font-weight: bold;
     letter-spacing: 0.2em;
 }
-#easy:hover {
+#easyButton:hover {
     border-color: #BFD200;
     border-width: 4px;
 }
 
-#medium {
+#mediumButton {
     color: #F3722C;
     font-weight: bold;
     letter-spacing: 0.2em;
 }
-#medium:hover {
+#mediumButton:hover {
     border-color: #F3722C;
     border-width: 4px;
 }
 
-#hard {
+#hardButton {
     color: #F94144;
     font-weight: bold;
     letter-spacing: 0.2em;
 }
-#hard:hover {
+#hardButton:hover {
     border-color: #F94144;
     border-width: 4px;
 }
@@ -139,6 +139,7 @@ button:hover {
 
 .card:hover {
     border-color: #F3722C;
+    border-width: 4px;
 }
 
 .easy-game>.card {
