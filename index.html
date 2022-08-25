@@ -19,7 +19,7 @@
 </section>
     
 <!-- Start screen, game instructions and name entry, hidden after game start-->
-<div id="start-wrapper" class="game-wrapper">
+<div id="StartScreen" class="game-wrapper">
         <div id="start-screen" class="gscreen startScreen">
             <h2><center>How to play</center></h2>
             <p><center>Click on the tiles to try and match pairs of pictures.</center></p>
@@ -33,13 +33,16 @@
         <button id="hard" data-type="submit" class="hard">Hard</button>
     </section>
 </div> 
-    <!--Game Section -  Hidden until triggered.-->
+
+<!--Game Section -  Hidden until triggered.-->
+    
     <!--Number of Guesses-->
-    <section class="score-area">
+    <section id="gameScreen" class="score-area mainGame">
         <p class="guesses">Number of Moves: <span id="score">0</span></p>
     </section>
-    <!--Set to easy to start.-->
-    <section class="game easy-game"></section>
+   
+    <!--Set to easy to start.
+    <section class="game easy-game"></section>-->
    
     <!--Congratulations - Hidden until triggered.-->
     <section class="win-holder">
@@ -53,7 +56,7 @@
                 <div class="hitem">Yipee!   </div>
                 <div class="hitem">Jolly good show!</div>
             </div>
-            <button data-type="submit" class="restart">Play Again?</button>
+            <button id="start-again-button" data-type="submit" class="restart">Play Again?</button>
         </div>
     </section>
 

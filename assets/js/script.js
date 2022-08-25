@@ -1,19 +1,12 @@
 /**
  * Event Listeners
- */
+*/
 
  document.addEventListener("DOMContentLoaded", function () {
   shuffledCards();
   imageGenerator();
-});
+}); 
 
-/**
-* Audio
-*/
-
-let cardSound = new Audio('./assets/sounds/card-flip.wav');
-let matchSound = new Audio('./assets/sounds/match.mp3');
-let winSound = new Audio('./assets/sounds/game-win.wav');
 
 /**
 * Select Game Type - Used by the Card Grid Generator to determine the cards used
@@ -122,6 +115,18 @@ let getImages = [{
 }, {
   imgSrc: "./assets/images/sloth_8.png",
   name: "sloth_8"
+}, {
+  imgSrc: "./assets/images/sloth_9.png",
+  name: "sloth_9"
+}, {
+  imgSrc: "./assets/images/sloth_9.png",
+  name: "sloth_9"
+}, {
+  imgSrc: "./assets/images/sloth_10.png",
+  name: "sloth_10"
+}, {
+  imgSrc: "./assets/images/sloth_10.png",
+  name: "sloth_10"
 },
 ]
 
@@ -180,7 +185,6 @@ let imageGenerator = () => {
       picture.src = element.imgSrc;
 
       card.addEventListener("click", (names) => {
-          cardSound.play();
           numberOfCards.push(element);
           console.log(numberOfCards[0]);
           console.log(numberOfCards[1]);
@@ -216,7 +220,6 @@ const checkForMatch = (names) => {
       if (numberOfCards[0].name === numberOfCards[1].name) {
           console.log("match");
           incrementScore();
-          setTimeout(() => matchSound.play(), 350);
           flipCounter.push(1);
           flipCard.forEach((card) => {
               numberOfCards = [];
@@ -265,7 +268,6 @@ function incrementScore() {
 */
 
 let gameWin = () => {
-  winSound.play(), 1000;
   win = document.getElementsByClassName("congratulations");
   win[0].classList.toggle("congratulationsHidden");
 
