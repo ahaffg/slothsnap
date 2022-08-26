@@ -1,72 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Short+Stack&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Short+Stack&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Sloth Snap!</title>
 </head>
+
 <body>
-<!--Game Title-->
-<section class="filler">
-    <section class="header">
-        <h1 class="title">Sloth Snap!</h1>
-</section>
-    
-<!-- Start screen, game instructions and name entry, hidden after game start-->
-<div id="StartScreen" class="game-wrapper">
-        <div id="start-screen" class="gscreen startScreen">
-            <h2><center>How to play</center></h2>
-            <p><center>Click on the tiles to try and match pairs of pictures.</center></p>
-            <p><center>Click on a difficulty level button to begin.</center></p>
-            <p><center>Good luck!</center></p>
-        </div>
-<!--Difficulty Buttons-->
-    <section class="difficulty">
-        <button id="easyButton" data-type="submit" class="easy">Easy</button>
-        <button id="mediumButton" data-type="submit" class="medium">Medium</button>
-        <button id="hardButton" data-type="submit" class="hard">Hard</button>
-    </section>
-</div> 
+    <!--Game Title-->
+    <section class="filler">
+        <section class="header">
+            <h1 class="title">Sloth Snap!</h1>
+        </section>
 
-<!--Game Section -  Hidden until triggered.-->
-    
-    <!--Number of Guesses-->
-    <section id="gameScreen" class="score-area mainGame">
-        <p class="guesses">Number of Moves: <span id="score">0</span></p>
-    </section>
-   
-    <!--Set to easy to start.-->
-    <section class="game easy-game"></section>
-   
-    <!--Congratulations - Hidden until triggered.-->
-    <section class="win-holder">
-        <div class="hwrap congratulations congratulationsHidden">
-            <div class="score-wrapper">You matched all the cards in <span id="total-score">0</span> moves<br>
-                Your best score so far for <span id="difficulty-text">Easy</span> difficulty is <span
-                    id="previous-score"></span></div>
-            <div class="hmove">
-                <div class="hitem">Hooray!  </div>
-                <div class="hitem">Well done!   </div>
-                <div class="hitem">Yipee!   </div>
-                <div class="hitem">Jolly good show!</div>
+        <!-- Start screen, game instructions and name entry, hidden after game start-->
+        <section id="startScreen" class="game-wrapper startScreen startScreenHidden">
+            <div id="start-screen" class="hwrap">
+                <h2>
+                    <center>How to play</center>
+                </h2>
+                <p>
+                    <center>Click on the tiles to try and match pairs of pictures.</center>
+                </p>
+                <p>
+                    <center>Click on a difficulty level button to begin.</center>
+                </p>
+                <p>
+                    <center>Good luck!</center>
+                </p>
             </div>
-            <button id="start-again-button" data-type="submit" class="restart">Play Again?</button>
-        </div>
+            <!--Difficulty Buttons-->
+            <section class="difficulty">
+                <button id="easyButton" data-type="submit" class="easy">Easy</button>
+                <button id="mediumButton" data-type="submit" class="medium">Medium</button>
+                <button id="hardButton" data-type="submit" class="hard">Hard</button>
+            </section>
+        </section>
+
+        <!--Game Section -  Hidden until triggered.-->
+
+        <!--Number of Guesses-->
+        <section id="gameScreen" class="gameScreen">
+            <p class="guesses">Number of Moves: <span id="score">0</span></p>
+            <!--Set to easy to start.-->
+            <section class="game"></section>
+        </section>
+
+        
+        <!--Congratulations - Hidden until triggered.-->
+        <section class="win-holder">
+            <div class="hwrap congratulations congratulationsHidden">
+                <div class="score-wrapper">You matched all the cards in <span id="total-score">0</span> moves<br>
+                    Your best score so far for <span id="difficulty-text">Easy</span> difficulty is <span
+                        id="previous-score"></span></div>
+                <div class="hmove">
+                    <div class="hitem">Hooray! </div>
+                    <div class="hitem">Well done! </div>
+                    <div class="hitem">Yipee! </div>
+                    <div class="hitem">Jolly good show!</div>
+                </div>
+                <button id="start-again-button" data-type="submit" class="restart">Play Again?</button>
+            </div>
+        </section>
+
     </section>
 
-</section>
-
-<script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
- <!-- Game script -->
- <script src="assets/js/script.js"></script>
+<!-- Game script -->
+<script src="assets/js/script.js"></script>
 </body>
+
 </html>
