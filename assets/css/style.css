@@ -25,7 +25,7 @@ h1 {
     text-shadow: #F3722C 2px;
 }
 
-.start-wrapper .game-wrapper {
+/*.startScreen {
     width: 30em;
     padding: 0.625em;
     margin: auto;
@@ -37,9 +37,10 @@ h1 {
     background-size: contain;
     z-index: 100;
     font-size: 150%;
-}
+    color: #2F4858;
+}*/
 
-.start-wrapper .game-wrapper {
+.gameScreen {
     width: 25em;
     margin: auto;
     padding: 0.3125em;

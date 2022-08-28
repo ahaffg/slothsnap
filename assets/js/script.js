@@ -7,9 +7,15 @@ document.addEventListener("DOMContentLoaded", function () {
   imageGenerator();
 });
 
-* Select Game Type - Used by the Card Grid Generator to determine the cards used
+document.getElementById("easyButton").addEventListener("click"() {
+  classList.hide("startScreen");
+  classList.toggle("gameScreen");
+});
+
+
+/* Select Game Type - Used by the Card Grid Generator to determine the cards used
   * and by the CSS to change the layout of the grid.
-* /
+*/
 
 var easy = true;
 var medium = false;
@@ -23,8 +29,6 @@ let hiddenScore = 0;
 /* What happens when the Easy, Medium or Hard buttons are clicked */
 let easyButton = document.getElementsByClassName("easy");
 easyButton[0].addEventListener("click", () => {
-  classList.remove("hideStartScreen");
-  classList.add("showGameScreen" "game");
   easy = true;
   medium = false;
   hard = false;
@@ -35,13 +39,9 @@ easyButton[0].addEventListener("click", () => {
   levelSelect();
   hiddenScore = 0;
   document.getElementById("difficulty-text").innerText = "Easy";
-
-
 });
 let mediumButton = document.getElementsByClassName("medium");
 mediumButton[0].addEventListener("click", () => {
-  classList.remove("hideStartScreen");
-  classList.add("showGameScreen" "game");
   medium = true;
   easy = false;
   hard = false;
@@ -55,8 +55,6 @@ mediumButton[0].addEventListener("click", () => {
 });
 let hardButton = document.getElementsByClassName("hard");
 hardButton[0].addEventListener("click", () => {
-  classList.remove("hideStartScreen");
-  classList.add("showGameScreen", "game");
   hard = true;
   easy = false;
   medium = false;
