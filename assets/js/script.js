@@ -126,6 +126,18 @@ let getImages = [{
 }, {
   imgSrc: "./assets/images/sloth_10.png",
   name: "sloth_10"
+}, {
+  imgSrc: "./assets/images/sloth_11.png",
+  name: "sloth_11"
+}, {
+  imgSrc: "./assets/images/sloth_11.png",
+  name: "sloth_1"
+}, {
+  imgSrc: "./assets/images/sloth_12.png",
+  name: "sloth_12"
+}, {
+  imgSrc: "./assets/images/sloth_12.png",
+  name: "sloth_12"
 },
 ]
 
