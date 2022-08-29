@@ -17,7 +17,7 @@ body {
 h1 {
     font-family: 'Mochiy Pop One', sans-serif;
     color: #2F4858;
-    font-size: 7vw;
+    font-size: 6vw;
     text-align: center;
 }
 
@@ -79,6 +79,9 @@ button:hover {
     border-width: 4px;
 }
 
+.btn-warning {
+    color: #FFFFFF;
+}
 
 .btn:hover{
     border-color: gold;
@@ -88,7 +91,8 @@ button:hover {
 }
 
 .difficulty{
-    margin: auto;
+    width:25em;
+    margin:auto;
 }
 
 .easy-game {
