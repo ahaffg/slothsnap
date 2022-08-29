@@ -3,52 +3,30 @@
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #BFD200;
+    background-image: url('../images/leafBkg.png');
     box-sizing: border-box;
     font-family: 'Short Stack', cursive;
     color: #2F4858;
 }
 
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #BFD200;
-    background-image: url('../images/leafBkg.png');
-
-}
-
 h1 {
     font-family: 'Mochiy Pop One', sans-serif;
     color: #2F4858;
-    font-size: 4em;
-    text-shadow: #F3722C 2px;
-}
-
-/*.startScreen {
-    width: 30em;
-    padding: 0.625em;
-    margin: auto;
-    background-color: #BFD200;
+    font-size: 7vw;
     text-align: center;
-    transform: translate(0px, -22.5em);
-    border: 0.3125em #2F4858 solid;
-    background: url(../images/leafBkg.png);
-    background-size: contain;
-    z-index: 100;
-    font-size: 150%;
-    color: #2F4858;
-}*/
-
-.gameScreen {
-    width: 25em;
-    margin: auto;
-    padding: 0.3125em;
-    border-radius: 1.25em;
-    border:#1e2a40 4px solid;
-    color: #FFFFFF;
-    background-color: #1e2a40;
 }
+
+#header {
+    width: 100vw;
+    max-width: fit-content;
+    position: absolute;
+}
+
 
 button {
     display: inline-block;
@@ -69,10 +47,11 @@ button:hover {
 }
 
 #easyButton {
-    color:#BFD200;
+    color: #BFD200;
     font-weight: bold;
     letter-spacing: 0.2em;
 }
+
 #easyButton:hover {
     border-color: #BFD200;
     border-width: 4px;
@@ -83,6 +62,7 @@ button:hover {
     font-weight: bold;
     letter-spacing: 0.2em;
 }
+
 #mediumButton:hover {
     border-color: #F3722C;
     border-width: 4px;
@@ -93,9 +73,22 @@ button:hover {
     font-weight: bold;
     letter-spacing: 0.2em;
 }
+
 #hardButton:hover {
     border-color: #F94144;
     border-width: 4px;
+}
+
+
+.btn:hover{
+    border-color: gold;
+    border-width: 4px;
+    color: #FFFFFF;
+    font-weight:bolder;
+}
+
+.difficulty{
+    margin: auto;
 }
 
 .easy-game {
@@ -189,14 +182,14 @@ button:hover {
     text-align: center;
     background-color: #1e2a40;
     border-radius: 1.25em;
-    width: 20em;
+    width: 15em;
     margin: auto;
 }
 
 .win-holder {
     height: 0px;
     font-family: 'Mochiy Pop One', sans-serif;
-    color:#F3722C;
+    color: #F3722C;
 }
 
 .congratulations {
@@ -211,6 +204,11 @@ button:hover {
     background-size: contain;
     z-index: 100;
     font-size: 150%;
+}
+
+.modal-content{
+    background-color: #BFD200;
+    text-align: center;
 }
 
 .congratulationsHidden {
@@ -289,13 +287,13 @@ button:hover {
     }
 
     .medium-game>.card {
-        height: 4.6875em;
-        width: 4.6875em;
+        height: 6.25em;
+        width: 6.25em;
     }
 
     .hard-game>.card {
-        height: 4.6875em;
-        width: 4.6875em;
+        height: 6.25em;
+        width: 6.25em;
     }
 
     .guesses {

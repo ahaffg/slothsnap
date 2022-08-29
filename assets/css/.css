@@ -16,18 +16,15 @@
 
 <body>
     <!--Game Title-->
-    <br>
     <section class="filler">
         <section class="header">
             <h1 class="title">Sloth Snap!</h1>
         </section>
-        <br>
         <!--Game Section-->
 
         <!--Number of Guesses-->
         <section id="gameScreen" class="gameScreen">
-            <p class="guesses">Number of guesses: <span id="score">0</span></p>
-            <br>
+            <p class="guesses">Guesses: <span id="score">0</span></p>
         <!--Set to easy to start.-->
             <section class="game easy-game"></section>
         </section>
@@ -37,7 +34,7 @@
                 <button id="mediumButton" data-type="submit" class="medium">Medium</button>
                 <button id="hardButton" data-type="submit" class="hard">Hard</button>
             <!-- Button trigger modal -->
-                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">?</button>
+                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">"?"</button>
             <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -58,7 +55,7 @@
             </p>
         </div>
         <div class="modal-footer">
-          <button type="button" id="closeBtn" class="btn btn-warning" data-bs-dismiss="modal">Lets Go!</button>
+          <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Lets Go!</button>
         </div>
       </div>
     </div>

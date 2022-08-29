@@ -7,11 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
   imageGenerator();
 });
 
-document.getElementById("easyButton").addEventListener("click"() {
-  classList.hide("startScreen");
-  classList.toggle("gameScreen");
-});
-
 
 /* Select Game Type - Used by the Card Grid Generator to determine the cards used
   * and by the CSS to change the layout of the grid.
