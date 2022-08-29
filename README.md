@@ -140,7 +140,9 @@ I have consulted numerous websites, individuals and slack channels to get suppor
  - [Mdn web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) for information about Arrays and also identifying bugs.
  - [DevelopedByEd](https://developedbyed.com/) that taught me in his vides on how to generate a board of cards and display it as a CSS grid.
  - [W3 Schools](https://www.w3schools.com/jsref/met_element_addeventlistener.asp) for understanding Event Listeners. 
-  - [Patternio](https://patternico.com/#t4jZ7NG8wcwht3SL) for providing an easy way for me to create a unique and dynamic background using my own images.
+ - [Patternio](https://patternico.com/#t4jZ7NG8wcwht3SL) for providing an easy way for me to create a unique and dynamic background using my own images.
+ - [Rob Appleby](https://github.com/robappleby1/Milestone-Project-2---stoke-city-memory-game-for-kids)[Samuel Dainton](https://github.com/Samuel-Dainton/portfolio-project-2) [Mats Simonsson](https://github.com/Pelikantapeten/p2-quickmem) [Fabio Faria](https://github.com/Daferia/ultimate_Quiz_P2) [Nicolas Cagna](https://github.com/nicolascagna96/quick-memory-game) for their fantastic milestone 2 projects, which provided me with inspiration nd helped me see what was possible and how I wanted my game to look.
+ - My fantastic mentor [Martina Terlević](https://www.linkedin.com/in/martinaterlevic/) for always being so helpful and flexible, as well as all round awesome human!
 ### Acknowledgment
 
 
