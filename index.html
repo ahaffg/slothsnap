@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Short+Stack&display=swap"
@@ -21,8 +20,39 @@
         <section class="header">
             <h1 class="title">Sloth Snap!</h1>
         </section>
+      
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    "?"
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLabel">How to play</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>
+                <center>Click on the tiles to try and match pairs of pictures.</center>
+            </p>
+            <p>
+                <center>Click on a difficulty level button to begin.</center>
+            </p>
+            <p>
+                <center>Good luck!</center>
+            </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Lets Go!</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        <!-- Start screen, game instructions and name entry, hidden after game start-->
+        <!-- Start screen, game instructions and name entry, hidden after game start
         <section id="startScreen" class="startScreen">
             <div id="start-screen" class="hwrap">
                 <h2>
@@ -37,7 +67,7 @@
                 <p>
                     <center>Good luck!</center>
                 </p>
-            </div>
+            </div>-->
             <!--Difficulty Buttons-->
             <section class="difficulty">
                 <button id="easyButton" data-type="submit" class="easy">Easy</button>
@@ -50,7 +80,7 @@
 
         <!--Number of Guesses-->
         <section id="gameScreen" class="gameScreen">
-            <p class="guesses">Number of Moves: <span id="score">0</span></p>
+            <p class="guesses">Guesses: <span id="score">0</span></p>
             <!--Set to easy to start.-->
             <section class="game"></section>
         </section>
@@ -73,13 +103,13 @@
         </section>
 
     </section>
-
-    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
 <!-- Game script -->
 <script src="assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
 
 </html>
