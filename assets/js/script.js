@@ -152,11 +152,11 @@ let shuffledCards = () => {
       arrayOrder.sort(() => Math.random() - 0.5);
       return arrayOrder;
   } else if (medium === true) {
-      let arrayOrder = getImages.slice(0, 16);
+      let arrayOrder = getImages.slice(0, 18);
       arrayOrder.sort(() => Math.random() - 0.5);
       return arrayOrder;
   } else if (hard === true) {
-      let arrayOrder = getImages.slice(0, 36);
+      let arrayOrder = getImages.slice(0, 24);
       arrayOrder.sort(() => Math.random() - 0.5);
       return arrayOrder;
   }
@@ -254,10 +254,10 @@ const checkForMatch = (names) => {
   if (easy === true && flipCounter.length === 6) {
       gameWin();
   }
-  if (medium === true && flipCounter.length === 8) {
+  if (medium === true && flipCounter.length === 9) {
       gameWin();
   }
-  if (hard === true && flipCounter.length === 18) {
+  if (hard === true && flipCounter.length === 12) {
       gameWin();
   }
 };

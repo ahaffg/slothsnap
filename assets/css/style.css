@@ -11,12 +11,12 @@ body {
     background-image: url('../images/leafBkg.png');
     box-sizing: border-box;
     font-family: 'Short Stack', cursive;
-    color: #2F4858;
+    color: #1e2a40;
 }
 
 h1 {
     font-family: 'Mochiy Pop One', sans-serif;
-    color: #2F4858;
+    color: #1e2a40;
     font-size: 6vw;
     text-align: center;
 }
@@ -32,11 +32,11 @@ button {
     display: inline-block;
     padding: 0.375em 1.25em;
     margin: 0 0.125em 0.125em 0;
-    border: 0.1875em solid #2F4858;
+    border: 0.1875em solid #1e2a40;
     border-radius: 1.25em;
     box-sizing: border-box;
     color: #FFFFFF;
-    background-color: #2F4858;
+    background-color: #1e2a40;
     text-shadow: #BFD200;
     text-align: center;
     transition: all 0.2s;
@@ -79,16 +79,16 @@ button:hover {
     border-width: 4px;
 }
 
-.btn-warning {
+.btn {
     color: #FFFFFF;
 }
 
 .btn:hover{
     border-color: gold;
-    border-width: 4px;
+    border-width: 2px;
     color: #FFFFFF;
     font-weight:bolder;
-}
+} 
 
 .difficulty{
     width:25em;
