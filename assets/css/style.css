@@ -6,12 +6,16 @@
 }
 
 body {
-    min-height: 100vh;
+    min-height: 100%;
     background-color: #BFD200;
     background-image: url('../images/leafBkg.png');
     box-sizing: border-box;
     font-family: 'Short Stack', cursive;
     color: #1e2a40;
+}
+
+html {
+    height: 100vh;
 }
 
 h1 {
@@ -21,12 +25,14 @@ h1 {
     text-align: center;
 }
 
-#header {
-    width: 100vw;
-    max-width: fit-content;
-    position: absolute;
+.header {
+    margin: 0.5em;
 }
 
+.difficulty {
+    margin: auto;
+    width: fit-content;
+}
 
 button {
     display: inline-block;
@@ -90,11 +96,6 @@ button:hover {
     font-weight:bolder;
 } 
 
-.difficulty{
-    width:25em;
-    margin:auto;
-}
-
 .easy-game {
     margin: 1.25em auto;
     display: grid;
@@ -132,6 +133,7 @@ button:hover {
     transform-style: preserve-3d;
     transition: 0.5s ease-in-out;
     border-radius: 25px;
+    border:#F3722C solid;
 
 }
 
