@@ -96,6 +96,14 @@ button:hover {
     font-weight:bolder;
 } 
 
+#correct {
+    max-width: 12em;
+}
+#incorrect {
+    max-width: 12em;
+}
+
+
 .easy-game {
     margin: 1.25em auto;
     display: grid;
@@ -262,9 +270,13 @@ button:hover {
 
 .filler {
     min-height: calc(100vh - 7.5em);
-    align-content: center;
 }
-
+.footer {
+    color: #FFFFFF;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.625em;
+}
 
 /* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
 /* 4 ITEMS -400%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
