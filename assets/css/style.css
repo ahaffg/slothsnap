@@ -25,6 +25,11 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-family: 'Mochiy Pop One', sans-serif;
+    color: #1e2a40;
+}
+
 .header {
     margin: 0.5em;
 }
@@ -86,23 +91,24 @@ button:hover {
 }
 
 .btn {
-    color: #FFFFFF;
+    color: #1e2a40;
+    font-weight: bold;
 }
 
 .btn:hover{
     border-color: gold;
     border-width: 2px;
-    color: #FFFFFF;
+    color: #1e2a40;
     font-weight:bolder;
 } 
 
 #correct {
     max-width: 12em;
 }
+
 #incorrect {
     max-width: 12em;
 }
-
 
 .easy-game {
     margin: 1.25em auto;
@@ -225,6 +231,10 @@ button:hover {
     text-align: center;
 }
 
+.modal-content p {
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
 .congratulationsHidden {
     opacity: 0.0;
     pointer-events: none;
@@ -271,8 +281,8 @@ button:hover {
 .filler {
     min-height: calc(100vh - 7.5em);
 }
-.footer {
-    color: #FFFFFF;
+footer {
+    color: #fff;
     width: 100%;
     text-align: center;
     margin-top: 0.625em;
@@ -414,9 +424,9 @@ button:hover {
         font-size: 80%;
     }
 
-    .footer {
+    /*.footer {
         font-size: 70%;
-    }
+    }*/
 }
 
 @media (max-width: 400px) {
