@@ -32,6 +32,12 @@ h2 {
 
 .header {
     margin: 0.5em;
+    height: 80px;
+    width: 100%;
+    margin-top: -100px;
+    margin-bottom: -100px;
+    position: fixed;
+    z-index: 5;
 }
 
 .difficulty {
@@ -280,6 +286,7 @@ button:hover {
 
 .filler {
     min-height: calc(100vh - 7.5em);
+    position: fixed top;
 }
 footer {
     color: #fff;
