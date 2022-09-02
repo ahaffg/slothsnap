@@ -1,7 +1,7 @@
 # Sloth Snap!
 ![Sloths](/assets/images/readMeImages/readMeSlothCards.jpg)
 # Project Aim
-I want to create a simple memory game to aid my son's short term memory ability. My son is neurodivergent and struggles with focusing and short term memory. Sloth Snap is a memory game designed to challenge the player to reach a perfect game of 6 pairs. The user interface is bright and friendly and directly engaes my son's special interest- Sloths!
+I want to create a simple memory game to aid my son's short term memory ability. My son is neurodivergent and struggles with focusing and short term memory. Sloth Snap is a memory game designed to challenge the player to reach a perfect game of 6 pairs. The user interface is bright and friendly and directly engages one my son's special interests- Sloths!
  
 This project is the second of four projects that needs to be completed in order to receive a diploma in Software Development from The Code Institute.
 Required technologies are HTML5, CSS3 and JavaScript.
@@ -21,8 +21,8 @@ A live version of the project can be found here - https://ahaffg.github.io/sloth
     + [Images](#images "Images")
 + [Features](#features "Features")
   + [Existing Features](#existing-features "Existing Features")
-    + [Start Screen](#start-screen "Start Screen")
     + [Game Screen](#game-screen "Game Screen")
+    + [Help Screen](#help-screen "Help Screen")
     + [End Screen](#end-screen "End Screen")
   + [Features Left to Implement](#features-left-to-implement "Features Left to Implement")
 + [Technologies used](#technologies-used "Technologies used")
@@ -37,13 +37,13 @@ A live version of the project can be found here - https://ahaffg.github.io/sloth
 ### User Demographic
 The game is aimed at young children or children who recieve additional learning support. The game will allow a user to continue playing until they complete the game so that they are not disheartened if they do not complete the game within a certain time or within a certain ammount of moves.
 ### User Stories
-Initially this game has been designed for my son (6 years) however, down the line, other younger children or neurodivergent people who would like a way to exersize and develop their short term memry muscles may benefit from the game too
+Initially this game has been designed for my son (6 years) however, down the line, other younger children or neurodivergent people who would like a way to exersize and develop their short term memory muscles may benefit from the game too
 #### New players
 As a new user I want to:
 -	Familiarise myself with the game and complete the game
 #### Returning players
 As a returning user I want to:
--	Complete the game in a decreasing amount of time
+-	Complete the game in a decreasing amount of guesses.
 -	Try harder levels with more cards to remember.
 As a regular user I want to:
 -	Have a bilingual option to the game.
@@ -54,8 +54,14 @@ As a regular user I want to:
 ### Design
 The game has three sections: "Welcome!", "Play!" and "Hooray!".
 #### Design Discovery Phase
-![Start Game Wireframe](/assets/images/readMeImages/slothSnapWireFrameStartGame.jpg)
+![Game Wireframe](/assets/images/readMeImages/slothSnapWireFrameStartGame.jpg)
 Above is my wireframe for the layout of the "Play!" screen. I want there to be as few functions as possible so that the game play is intuitive and that the player can focus on the game.
+![Buttons](/assets/images/readMeImages/slothSnapWireFrameStartGame_buttons.jpg)
+After viewing several similar projects, I realised that it would be useful to have a live counter that would show the player how many guesses they had made so far. I alao wanted the level selector buttons to be accesable but not distracting to the main game, so these have been placed at the bottom of the screen. The text in these level buttons are color co-ordinated e.g. easy = green, medium = yellow and hard = red so that non-literate users can still easily navigate the user interface. There is also a button that triggers a modal window that gives instructions on how to play the game.
+![Help](/assets/images/readMeImages/wireFrameHelp.jpg)
+In this modal, the instructions are written as well as given in a visual format so that users who are unable to read are able to easily understand the goals of the game. The modal is triggered by a button labeled "?" a symbol that is easily understood by non-literate users.
+![Hooray](/assets/images/readMeImages/slothSnapWireFrameCongratulations.png)
+This window appears once the user has completed the game by matching all the pairs. It shows how many guesses it took for them to complete the game and, if this is not the first time they have played the gme in that session, what their best score is for that level. This function re-sets every time the page is re-loaded.
 
 In order for the game to work I will need to write functions that:
 •	Have a template literal that uses the inputted username to personalise the game for the player.
@@ -79,35 +85,40 @@ The background was generated by [Patternio](https://patternico.com/#t4jZ7NG8wcwh
 
 ![Background](/assets/images/readMeImages/readMeBkg.jpg)
 
-There will be six sloth card pairs initially. I have drawn them to be similar in terms of color and style but they are quite different in appearance. In the future if I were designing harder levels I could draw cards that appear more similar so the player has to focus more on details to identify the pairs.
+There will be six sloth card pairs for the easy level. I have drawn them to be similar in terms of color and style but they are quite different in appearance. In the future if I were designing harder levels I could draw cards that appear more similar so the player has to focus more on details to identify the pairs.
 
 ![Cards](/assets/images/readMeImages/readMeSlothCards.jpg)
 
+Ther are a further 2 pairs added for the medium level (8 pairs total) and one more for the hard (9 pairs in total.)
+
+![A Snuggle of Sloths](/assets/images/readMeImages/sloths_cards.png)
+
+![False](/assets/images/false.png) ![Correct](/assets/images/correct.png)
+The two images in the help window are designed to give pictoral instructions to non-literate users so they can easily figure out game play for themselves without additional help. This is importance for confidence building, encouraging independence and building IT skills.
 ## Features 
-Sloth Snap consists of three game screens:
+Sloth Snap consists of three screens:
  - Start Screen "Welcome!"
  - Game Screen "Play!"
  - End Screen "Hooray!"
 Sloth Snap is a linear game and when the player presses start the game board is created and shuffled. The player ends up at the end screen at either a ”Win” or a ”Loss”.
 ### Existing Features
-#### Start Screen 
+#### Game Screen 
+The game screen "Play!" 
+ - At start 12 cards with symbols are shuffled and distributed across the board. The game starts the moment the game screen is visible to the player.
+#### Help Screen
 The Start Screen "Welcome!" consists of a header and a paragraph that contains the games main title and the rules. Other elements are:
  - Text that tells player to enter name, this is optional
  - Input field for player name (optional)
  - Start button that takes the player to the main board and shuffles the deck.
-#### Game Screen
-The game screen "Play!" 
- - At start 12 cards with symbols are shuffled and distributed across the board. The game starts the moment the game screen is visible to the player.
 
 #### End Screen
 The end screen "Hooray!" Sloth Snap is a linear game and all players end up at the end screen winning. The end screen 
  - Header that tells the player that they have won!
  - Paragraph telling the player how many pairs they were able to match.
+ - A ticker function that gives a congratulatory message.
  - Play again button that generates a new game board and shuffles the cards.
- - Quit button that takes the player to the start screen.
 ### Features Left to Implement
 - Bilingual option (my son is bilingual and there are too few games available in Welsh and English!)
-- At least two more game modes e.g. one harder and one easier.
 - The option to change the color scheme specifically with options for color blind players, and options for muted or darker palettes for neurodivergent players with sensitivities to color.
 ## Technologies used
 - [HTML](https://en.wikipedia.org/wiki/HTML)
@@ -131,7 +142,7 @@ The procedure for deployment followed the "Creating your site" steps provided in
 6. The website will deploy and the pages refreshes to provide the live link to the project.
 The live link can be found here - https://pelikantapeten.github.io/p2-quickmem/
 ## Content 
-- All text content in this game has been produced by the author.
+- All text content in this game has been produced by the author, Angharad Griffiths.
 ## Media
 Google Fonts
 ## Credits 
