@@ -55,22 +55,29 @@ As a regular user I want to:
 The game has three sections: "Welcome!", "Play!" and "Hooray!".
 #### Design Discovery Phase
 ![Game Wireframe](/assets/images/readMeImages/slothSnapWireFrameStartGame.jpg)
+
 Above is my wireframe for the layout of the "Play!" screen. I want there to be as few functions as possible so that the game play is intuitive and that the player can focus on the game.
+
 ![Buttons](/assets/images/readMeImages/slothSnapWireFrameStartGame_buttons.jpg)
+
 After viewing several similar projects, I realised that it would be useful to have a live counter that would show the player how many guesses they had made so far. I alao wanted the level selector buttons to be accesable but not distracting to the main game, so these have been placed at the bottom of the screen. The text in these level buttons are color co-ordinated e.g. easy = green, medium = yellow and hard = red so that non-literate users can still easily navigate the user interface. There is also a button that triggers a modal window that gives instructions on how to play the game.
+
 ![Help](/assets/images/readMeImages/wireFrameHelp.jpg)
+
 In this modal, the instructions are written as well as given in a visual format so that users who are unable to read are able to easily understand the goals of the game. The modal is triggered by a button labeled "?" a symbol that is easily understood by non-literate users.
+
 ![Hooray](/assets/images/readMeImages/slothSnapWireFrameCongratulations.png)
+
 This window appears once the user has completed the game by matching all the pairs. It shows how many guesses it took for them to complete the game and, if this is not the first time they have played the gme in that session, what their best score is for that level. This function re-sets every time the page is re-loaded.
 
 In order for the game to work I will need to write functions that:
-•	Have a template literal that uses the inputted username to personalise the game for the player.
-•	Event listens for clicks.
-•	Checks the values of the selected cards to test if they are a matching pair.
-•	Keep the correctly selected pairs ‘facing upwards’
-•	Or return incorrect selections to a ‘downward’ position.
-•	An event listener that will trigger a congratulatory message (template literal) when the game has been successfully completed.
-•	A function that will “shuffle” the cards each time a new game is started.
+-	Have a template literal that uses the inputted username to personalise the game for the player.
+-	Event listens for clicks.
+-	Checks the values of the selected cards to test if they are a matching pair.
+-	Keep the correctly selected pairs ‘facing upwards’
+-	Or return incorrect selections to a ‘downward’ position.
+-	An event listener that will trigger a congratulatory message (template literal) when the game has been successfully completed.
+-	A function that will “shuffle” the cards each time a new game is started.
 
 #### Colors
 ![Palette](/assets/images/readMeImages/readMepalette.jpg)
@@ -89,11 +96,12 @@ There will be six sloth card pairs for the easy level. I have drawn them to be s
 
 ![Cards](/assets/images/readMeImages/readMeSlothCards.jpg)
 
-Ther are a further 2 pairs added for the medium level (8 pairs total) and one more for the hard (9 pairs in total.)
+There are a further 2 pairs added for the medium level (8 pairs total) and one more for the hard (9 pairs in total.)
 
 ![A Snuggle of Sloths](/assets/images/readMeImages/sloths_cards.png)
 
 ![False](/assets/images/false.png) ![Correct](/assets/images/correct.png)
+
 The two images in the help window are designed to give pictoral instructions to non-literate users so they can easily figure out game play for themselves without additional help. This is importance for confidence building, encouraging independence and building IT skills.
 ## Features 
 Sloth Snap consists of three screens:
@@ -147,14 +155,12 @@ The live link can be found here - https://pelikantapeten.github.io/p2-quickmem/
 Google Fonts
 ## Credits 
 ### For code inspiration, design inputs, help and advice.
-I have consulted numerous websites, individuals and slack channels to get support for the code. No code block is directly copied but some generates from information I gathered from other developers and sites:
+I have consulted numerous websites, individuals and slack channels to get support for the code. I have listed below from where I have adapted code to suit the needs of my gameS:
  - [Mdn web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) for information about Arrays and also identifying bugs.
  - [DevelopedByEd](https://developedbyed.com/) that taught me in his vides on how to generate a board of cards and display it as a CSS grid.
  - [W3 Schools](https://www.w3schools.com/jsref/met_element_addeventlistener.asp) for understanding Event Listeners. 
  - [Patternio](https://patternico.com/#t4jZ7NG8wcwht3SL) for providing an easy way for me to create a unique and dynamic background using my own images.
  - [Rob Appleby](https://github.com/robappleby1/Milestone-Project-2---stoke-city-memory-game-for-kids)[Samuel Dainton](https://github.com/Samuel-Dainton/portfolio-project-2) [Mats Simonsson](https://github.com/Pelikantapeten/p2-quickmem) [Fabio Faria](https://github.com/Daferia/ultimate_Quiz_P2) [Nicolas Cagna](https://github.com/nicolascagna96/quick-memory-game) for their fantastic milestone 2 projects, which provided me with inspiration nd helped me see what was possible and how I wanted my game to look.
- - My fantastic mentor [Martina Terlević](https://www.linkedin.com/in/martinaterlevic/) for always being so helpful and flexible, as well as all round awesome human!
+ 
 ### Acknowledgment
-
-
-`python3 -m http.server`
+- My fantastic mentor [Martina Terlević](https://www.linkedin.com/in/martinaterlevic/) for always being so helpful and flexible, as well as all round awesome human!
