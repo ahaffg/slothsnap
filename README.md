@@ -62,6 +62,8 @@ Above is my wireframe for the layout of the "Play!" screen. I want there to be a
 
 After viewing several similar projects, I realised that it would be useful to have a live counter that would show the player how many guesses they had made so far. I alao wanted the level selector buttons to be accesable but not distracting to the main game, so these have been placed at the bottom of the screen. The text in these level buttons are color co-ordinated e.g. easy = green, medium = yellow and hard = red so that non-literate users can still easily navigate the user interface. There is also a button that triggers a modal window that gives instructions on how to play the game.
 
+In other projects that I've seen I've seen functions like timers being used. I've decided againsed implementing anything like this in my game as this could potentially frustrate a user and cause them to loose confidence early on.
+
 ![Help](/assets/images/readMeImages/wireFrameHelp.jpg)
 
 In this modal, the instructions are written as well as given in a visual format so that users who are unable to read are able to easily understand the goals of the game. The modal is triggered by a button labeled "?" a symbol that is easily understood by non-literate users.

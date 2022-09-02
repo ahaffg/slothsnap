@@ -7,9 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
   imageGenerator();
 });
 
-
-/* Select Game Type - Used by the Card Grid Generator to determine the cards used
-  * and by the CSS to change the layout of the grid.
+/* Select Game Type - Card Grid Generator chooses the cards used
+  * and CSS changes the layout of the grid.
 */
 
 var easy = true;
@@ -21,7 +20,7 @@ var hardScore = 100;
 
 let hiddenScore = 0;
 
-/* What happens when the Easy, Medium or Hard buttons are clicked */
+/* Code for Easy, Medium and Hard buttons. */
 let easyButton = document.getElementsByClassName("easy");
 easyButton[0].addEventListener("click", () => {
   easy = true;
@@ -63,7 +62,9 @@ hardButton[0].addEventListener("click", () => {
 });
 
 /**
-* Image List - An array of all the images, taken by the Shuffle Cards section before going into the game.
+* Image List - An array of all the images, used by the Shuffle Cards section
+* before going into the game. Images 1-6 are used for the easy game, 7 and 8
+* are added for the medium game and 9, 10, 11 and 12 are added for the hard game. 
 */
 
 let getImages = [{
@@ -142,8 +143,9 @@ let getImages = [{
 ]
 
 /**
-* Shuffle Cards - Takes the getImages array, slices it down to size depending on the difficulty and shuffles
-* those cards into the new arrayOrder which is sent to the card grid generator.
+* Shuffle Cards - Takes the getImages array, slices it down to size depending 
+* on the difficulty and shuffles the cards into the new arrayOrder which is
+* sent to the card grid generator.
 */
 
 let shuffledCards = () => {
@@ -163,12 +165,12 @@ let shuffledCards = () => {
 };
 
 /**
-* Generate Card Grid - Creates the cards by placing div elements into a grid, then placing
-* the front of the card as an image using the shuffled array and creates the back of the card using
-* a single image in the CSS.
+* Generate Card Grid - Creates the cards by placing div elements into
+* a grid, then placing the front of the card as an image using the
+* shuffled array and creates the back of the card using a single image in CSS.
 * Each card has the name of the image attached to it for checking. 
-* The card divs can be clicked on which pushes the clicked card into the numberOfCards array for checking
-* and triggers the checkForMatch function.
+* The card divs can be clicked on which pushes the clicked card into the
+* numberOfCards array for checking and triggers the checkForMatch function.
 * The front and the back of the cards rotate 180degrees when the card is clicked on.
 */
 
@@ -209,14 +211,11 @@ let imageGenerator = () => {
 
 /**
 * Compare Cards - After a card is clicked on the checkForMatch function checks if there are 2
-* cards in the numberOfCards array. 
-* If so, it then compares the names of the cards. 
-* If correct,
-* the turn counter is increased, audio signals a match to the player, a 'counter' is added to
-* an array that checks for the end of the game, the array that compares the cards is cleared and
+* cards in the numberOfCards array. If so, it then compares the names of the cards. 
+* If correct, the turn counter is increased, a 'counter' is added to an array that
+* checks for the end of the game, the array that compares the cards is cleared and
 * two classes are changed so that the cards stay flipped over and becomes unclickable.
-* If incorrect,
-* the turn counter is increased and the cards flip back over after a short delay.
+* If incorrect, the turn counter is increased and the cards flip back over after a short delay.
 */
 
 let numberOfCards = [];
@@ -250,7 +249,7 @@ const checkForMatch = (names) => {
           });
       }
   }
-  /* Checks for if the player has won. */
+/* Checks to see if game has completed */
   if (easy === true && flipCounter.length === 6) {
       gameWin();
   }
@@ -262,8 +261,7 @@ const checkForMatch = (names) => {
   }
 };
 /**
-* Moves Counter - Increases the number of moves and inserts the number into two places on the page 
-* where it is visible to the player.
+* Moves Counter - Increases the number of moves and shows this to the player.
 */
 
 function incrementScore() {
