@@ -434,16 +434,51 @@ footer {
 
 @media (max-width: 400px) {
 
+    h1{
+        font-size: 300%;
+    }
+    .easy-game>.card{
+        height: 4em;
+        width: 4em;
+
+    }
+    
     .medium-game>.card {
-        height: 2.5em;
-        width: 2.5em;
+        height: 3em;
+        width: 3em;
 
     }
 
     .hard-game>.card {
-        height: 2.5em;
-        width: 2.5em;
+        height: 3em;
+        width: 3em;
     }
 
+    .guesses {
+        text-align: center;
+        display:flow-root;
+        padding: 10px;
+        border-radius: 1.25em;
+        width: 15em;
+    }
+
+    button{
+        display:list-item;
+        margin: 10px;
+    }
+    #easyButton {
+        margin-left: 20px;
+    }
+    #hardButton {
+        margin-left: 20px;
+    }
+    .btn {
+        margin-left: 55px; 
+    }
+
+
+
+        
+    }
 
 }
