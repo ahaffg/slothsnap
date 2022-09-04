@@ -132,7 +132,7 @@ let getImages = [{
   name: "sloth_11"
 }, {
   imgSrc: "./assets/images/sloth_11.png",
-  name: "sloth_1"
+  name: "sloth_11"
 }, {
   imgSrc: "./assets/images/sloth_12.png",
   name: "sloth_12"
