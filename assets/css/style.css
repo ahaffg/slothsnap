@@ -60,35 +60,35 @@ button:hover {
     border-color: #F3722C;
 }
 
-#easyButton {
+#easy-button {
     color: #BFD200;
     font-weight: bold;
     letter-spacing: 0.2em;
 }
 
-#easyButton:hover {
+#easy-button:hover {
     border-color: #BFD200;
     border-width: 4px;
 }
 
-#mediumButton {
+#medium-button {
     color: #F3722C;
     font-weight: bold;
     letter-spacing: 0.2em;
 }
 
-#mediumButton:hover {
+#medium-button:hover {
     border-color: #F3722C;
     border-width: 4px;
 }
 
-#hardButton {
+#hard-button {
     color: #F94144;
     font-weight: bold;
     letter-spacing: 0.2em;
 }
 
-#hardButton:hover {
+#hard-button:hover {
     border-color: #F94144;
     border-width: 4px;
 }
@@ -466,10 +466,10 @@ footer {
         display:list-item;
         margin: 10px;
     }
-    #easyButton {
+    #easy-button {
         margin-left: 20px;
     }
-    #hardButton {
+    #hard-button {
         margin-left: 20px;
     }
     .btn {
