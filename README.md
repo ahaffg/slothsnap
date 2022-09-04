@@ -137,7 +137,9 @@ The end screen "Hooray!" Sloth Snap is a linear game and all players end up at t
 ## Testing 
 
 ### Validator Testing 
-
+#### Lighthouse
+[Lighthouse](/assets/images/readMeImages/readmeLighthousePerformanceDetail.png)
+I appreciate the site may take a little longer to load due to the use of image files as opposed to smaller files, but I feel the end result is worth it!
 ### Unfixed Bugs
 
 ## Development and Deployment
