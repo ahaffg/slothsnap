@@ -143,9 +143,9 @@ let getImages = [{
 ]
 
 /**
-* Shuffle Cards - Takes the getImages array, slices it down to size depending 
-* on the difficulty and shuffles the cards into the new arrayOrder which is
-* sent to the card grid generator.
+* Shuffle Cards - takes the getImages array, slices it down to size according 
+* to the difficulty level selected and shuffles the cards into the new
+* arrayOrder which is sent to the card grid generator.
 */
 
 let shuffledCards = () => {

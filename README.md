@@ -20,7 +20,6 @@ A live version of the project can be found here - https://ahaffg.github.io/sloth
     + [Typography](#typography "Typography")
     + [Images](#images "Images")
 + [Features](#features "Features")
-  + [Existing Features](#existing-features "Existing Features")
     + [Game Screen](#game-screen "Game Screen")
     + [Help Screen](#help-screen "Help Screen")
     + [End Screen](#end-screen "End Screen")
@@ -28,7 +27,6 @@ A live version of the project can be found here - https://ahaffg.github.io/sloth
 + [Technologies used](#technologies-used "Technologies used")
 + [Testing](#testing "Testing")
   + [Validator Testing](#validator-testing "Validator Testing")
-  + [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
 + [Development and Deployment](#development-and-deployment "Development and Deployment")
 + [Content](#content "Content")
 + [Media](#media "Media")
@@ -111,7 +109,6 @@ Sloth Snap consists of three screens:
  - Game Screen "Play!"
  - End Screen "Hooray!"
 Sloth Snap is a linear game and when the player presses start the game board is created and shuffled. The player ends up at the end screen at either a ”Win” or a ”Loss”.
-### Existing Features
 #### Game Screen 
 The game screen "Play!" 
  - At start 12 cards with symbols are shuffled and distributed across the board. The game starts the moment the game screen is visible to the player.
@@ -120,7 +117,6 @@ The Start Screen "Welcome!" consists of a header and a paragraph that contains t
  - Text that tells player to enter name, this is optional
  - Input field for player name (optional)
  - Start button that takes the player to the main board and shuffles the deck.
-
 #### End Screen
 The end screen "Hooray!" Sloth Snap is a linear game and all players end up at the end screen winning. The end screen 
  - Header that tells the player that they have won!
@@ -130,6 +126,7 @@ The end screen "Hooray!" Sloth Snap is a linear game and all players end up at t
 ### Features Left to Implement
 - Bilingual option (my son is bilingual and there are too few games available in Welsh and English!)
 - The option to change the color scheme specifically with options for color blind players, and options for muted or darker palettes for neurodivergent players with sensitivities to color.
+- Havint the option of sound (that can be turned off for sound sensitive players) may add to the fun of the game and help with aiding memory.
 ## Technologies used
 - [HTML](https://en.wikipedia.org/wiki/HTML)
 - [CSS](https://en.wikipedia.org/wiki/CSS)
@@ -137,10 +134,22 @@ The end screen "Hooray!" Sloth Snap is a linear game and all players end up at t
 ## Testing 
 
 ### Validator Testing 
-#### Lighthouse
-[Lighthouse](/assets/images/readMeImages/readmeLighthousePerformanceDetail.png)
+
+[HTML](https://validator.w3.org/)
+![HTML](assets/images/readMeImages/readmeW3Report.png)
+No errors were found with the W3C validator.
+
+[Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
+![Lighthouse](assets/images/readMeImages/readmeLighthousePerformanceDetail.png)
 I appreciate the site may take a little longer to load due to the use of image files as opposed to smaller files, but I feel the end result is worth it!
-### Unfixed Bugs
+
+[CSS](https://jigsaw.w3.org/css-validator/)
+![CSS](assets/images/readMeImages/readmeJigsawReport.png)
+No errors were found with the CSS code through the W3 Jigsaw validator.
+
+[JavaScript](https://jshint.com/)
+[JSHint](assets/images/readMeImages/readmeJSHintReport.png)
+No errors were found in the JavaScript code through the JS Hint validator.
 
 ## Development and Deployment
 The development environment used for this project was GitPod. To track the development stage and handle version control regular commits and pushes to GitHub has been conducted. The GitPod environment was created using a template provided by Code Institute.
