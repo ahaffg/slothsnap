@@ -132,7 +132,20 @@ The end screen "Hooray!" Sloth Snap is a linear game and all players end up at t
 - [CSS](https://en.wikipedia.org/wiki/CSS)
 - [JavaScript](https://en.wikipedia.org/wiki/javascript)
 ## Testing 
+I have tested the game on as many different devices as possible as well as asking my friend, father and husband to do so too. They all found that the game worked for them, and had no issues with the sizing or color scheme.
 
+Most importantly, the game was finally tested by the young chap I designed the game for!
+
+![Testing](/assets/images/readMeImages/readmeIoloTestStart.jpg)
+(From left to right, top to bottom) Icing, Dil, Mel, Sloff, Moron, Iolo, Babi Sloth, Dave, Hottie, Molasses and Bob all enjoy a game of Sloth Snap!
+
+![Play](/assets/images/readMeImages/readmeIoloTestPlay.jpg)
+My son found the game easy to pick up and immediately after completing the first level wanted to try the harder levels. He loved that there were more sloths to 'collect'!
+
+![Win](/assets/images/readMeImages/readmeIoloTestWin.jpg)
+I think the one bit of feedback from my son that I should consider carefully for the future was that the wining message was a little anticlimactic, especially for non-readers. I noted that other students had used gifs as part of their congratulations message and in hindsight, this is not only a good idea for non readers, but also makes the game more attractive and plays into game theory, providing a visual reward as well as a numerical one.
+
+Success!
 ### Validator Testing 
 
 [HTML](https://validator.w3.org/)
@@ -173,7 +186,7 @@ I have consulted numerous websites, individuals and slack channels to get suppor
  - [DevelopedByEd](https://developedbyed.com/) that taught me in his vides on how to generate a board of cards and display it as a CSS grid.
  - [W3 Schools](https://www.w3schools.com/jsref/met_element_addeventlistener.asp) for understanding Event Listeners. 
  - [Patternio](https://patternico.com/#t4jZ7NG8wcwht3SL) for providing an easy way for me to create a unique and dynamic background using my own images.
- - [Rob Appleby](https://github.com/robappleby1/Milestone-Project-2---stoke-city-memory-game-for-kids)[Samuel Dainton](https://github.com/Samuel-Dainton/portfolio-project-2) [Mats Simonsson](https://github.com/Pelikantapeten/p2-quickmem) [Fabio Faria](https://github.com/Daferia/ultimate_Quiz_P2) [Nicolas Cagna](https://github.com/nicolascagna96/quick-memory-game) for their fantastic milestone 2 projects, which provided me with inspiration nd helped me see what was possible and how I wanted my game to look.
+ - [Rob Appleby](https://github.com/robappleby1/Milestone-Project-2---stoke-city-memory-game-for-kids), [Samuel Dainton](https://github.com/Samuel-Dainton/portfolio-project-2), [Mats Simonsson](https://github.com/Pelikantapeten/p2-quickmem), [Fabio Faria](https://github.com/Daferia/ultimate_Quiz_P2), [Nicolas Cagna](https://github.com/nicolascagna96/quick-memory-game) for their fantastic milestone 2 projects, which provided me with inspiration nd helped me see what was possible and how I wanted my game to look.
  
 ### Acknowledgment
 - My fantastic mentor [Martina Terlević](https://www.linkedin.com/in/martinaterlevic/) for always being so helpful and flexible, as well as all round awesome human!
