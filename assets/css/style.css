@@ -384,7 +384,7 @@ footer {
 @media (max-width: 500px) {
 
     h1 {
-        font-size: 150%;
+        font-size: 200%;
     }
 
     .game {
@@ -408,13 +408,21 @@ footer {
         width: 3.125em;
     }
 
-
-
     .guesses {
+        text-align: center;
+        display:flow-root;
+        padding: 10px;
+        border-radius: 1.25em;
+        width: 15em;
         font-size: 100%;
+        height: fit-content;
+    }
+
+    /*.guesses {
+        
         width: 14em;
 
-    }
+    }*/
 
     .congratulations {
         transform: translate(0px, -18em);
@@ -426,9 +434,6 @@ footer {
         font-size: 80%;
     }
 
-    /*.footer {
-        font-size: 70%;
-    }*/
 }
 
 @media (max-width: 400px) {
