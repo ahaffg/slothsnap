@@ -242,6 +242,13 @@ button:hover {
     pointer-events: none;
 }
 
+.hitem img {
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+}
+
+
 .score-wrapper {
     width: 25em;
     margin: auto;
@@ -253,6 +260,14 @@ button:hover {
 
 #score {
     color: #BFD200;
+}
+
+#total-score {
+    color: #F3722C;
+}
+
+#previous-score {
+    color:#F3722C;
 }
 
 /* News Ticker Animation for the "Congratulations!". */
@@ -303,7 +318,7 @@ footer {
 }
 
 .hmove {
-    animation: tickerh linear 15s infinite;
+    animation: tickerh linear 10s infinite;
 }
 
 /* Media device size queries */
