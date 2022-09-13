@@ -199,8 +199,6 @@ let imageGenerator = () => {
 
       card.addEventListener("click", (names) => {
           numberOfCards.push(element);
-          console.log(numberOfCards[0]);
-          console.log(numberOfCards[1]);
           card.classList.add("correct");
           card.classList.toggle("flipCard");
           checkForMatch(names);
@@ -228,7 +226,6 @@ const checkForMatch = (names) => {
   if (numberOfCards.length === 2) {
 
       if (numberOfCards[0].name === numberOfCards[1].name) {
-          console.log("match");
           incrementScore();
           flipCounter.push(1);
           flipCard.forEach((card) => {
@@ -236,9 +233,7 @@ const checkForMatch = (names) => {
               targetCard.classList.add("counter");
               card.classList.remove("flipCard");
           });
-          console.log(flipCounter)
       } else {
-          console.log("wrong");
           incrementScore();
           flipCard.forEach((card) => {
               setTimeout(() => card.classList.remove("flipCard"), 1000);
@@ -296,7 +291,6 @@ let gameWin = () => {
       document.getElementById("previous-score").innerText = hiddenScore;
       hardScore = hiddenScore;
   }
-  console.log("Win!");
 };
 
 /**
