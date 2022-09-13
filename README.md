@@ -1,5 +1,5 @@
 # Sloth Snap!
-![Sloths](/assets/images/readMeImages/readMeSlothCards.jpg)
+![Sloth Snap!](/assets/images/readMeImages/readmeDeviceMockup.png)
 # Project Aim
 I want to create a simple memory game to aid my son's short term memory ability. My son is neurodivergent and struggles with focusing and short term memory. Sloth Snap is a memory game designed to challenge the player to reach a perfect game of 6 pairs. The user interface is bright and friendly and directly engages one my son's special interests- Sloths!
  
@@ -146,6 +146,12 @@ My son found the game easy to pick up and immediately after completing the first
 I think the one bit of feedback from my son that I should consider carefully for the future was that the wining message was a little anticlimactic, especially for non-readers. I noted that other students had used gifs as part of their congratulations message and in hindsight, this is not only a good idea for non readers, but also makes the game more attractive and plays into game theory, providing a visual reward as well as a numerical one.
 
 Success!
+
+N.B.
+![congratulations](/assets/images/readMeImages/readmeTestingCongrats.png)
+As a result of the feedback from my son I decided to alter the congratulations screen so that it showed some of the sloth images instead of the text I originally had. I thought this would be more rewarding and act as a better incentive to complete the game, as well as being better for non literate users.
+
+
 ### Validator Testing 
 
 [HTML](https://validator.w3.org/)
