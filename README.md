@@ -195,6 +195,7 @@ I have consulted numerous websites, individuals and slack channels to get suppor
  - [DevelopedByEd](https://developedbyed.com/) that taught me in his vides on how to generate a board of cards and display it as a CSS grid.
  - [W3 Schools](https://www.w3schools.com/jsref/met_element_addeventlistener.asp) for understanding Event Listeners. 
  - [Patternio](https://patternico.com/#t4jZ7NG8wcwht3SL) for providing an easy way for me to create a unique and dynamic background using my own images.
+ - [Techsini](https://techsini.com/multi-mockup/) was used to create the devide mock-up image at the head of this document.
  - [Rob Appleby](https://github.com/robappleby1/Milestone-Project-2---stoke-city-memory-game-for-kids), [Samuel Dainton](https://github.com/Samuel-Dainton/portfolio-project-2), [Mats Simonsson](https://github.com/Pelikantapeten/p2-quickmem), [Fabio Faria](https://github.com/Daferia/ultimate_Quiz_P2), [Nicolas Cagna](https://github.com/nicolascagna96/quick-memory-game) for their fantastic milestone 2 projects, which provided me with inspiration nd helped me see what was possible and how I wanted my game to look.
  
 ### Acknowledgment
