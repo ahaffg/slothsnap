@@ -27,6 +27,7 @@ A live version of the project can be found here - https://ahaffg.github.io/sloth
 + [Technologies used](#technologies-used "Technologies used")
 + [Testing](#testing "Testing")
   + [Validator Testing](#validator-testing "Validator Testing")
+  + [Known Bugs](#known-bugs "Known Bugs")
 + [Development and Deployment](#development-and-deployment "Development and Deployment")
 + [Content](#content "Content")
 + [Media](#media "Media")
@@ -147,10 +148,9 @@ I think the one bit of feedback from my son that I should consider carefully for
 
 Success!
 
-N.B.
-![congratulations](/assets/images/readMeImages/readmeTestingCongrats.png)
-As a result of the feedback from my son I decided to alter the congratulations screen so that it showed some of the sloth images instead of the text I originally had. I thought this would be more rewarding and act as a better incentive to complete the game, as well as being better for non literate users.
+N.B. As a result of the feedback from my son I decided to alter the congratulations screen so that it showed some of the sloth images instead of the text I originally had. I thought this would be more rewarding and act as a better incentive to complete the game, as well as being better for non literate users.
 
+![congratulations](/assets/images/readMeImages/readmeTestingCongrats.png)
 
 ### Validator Testing 
 
@@ -169,6 +169,9 @@ No errors were found with the CSS code through the W3 Jigsaw validator.
 [JavaScript](https://jshint.com/)
 [JSHint](assets/images/readMeImages/readmeJSHintReport.png)
 No errors were found in the JavaScript code through the JS Hint validator.
+
+### Known Bugs
+Some testers have reported that there the screen shakes sometimes when the card flips. I believe this is related to the CSS animation code, but I haven't been able to replicate the issue myself so I am unable to fix this.
 
 ## Development and Deployment
 The development environment used for this project was GitPod. To track the development stage and handle version control regular commits and pushes to GitHub has been conducted. The GitPod environment was created using a template provided by Code Institute.
